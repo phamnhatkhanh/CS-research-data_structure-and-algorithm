@@ -1,0 +1,1730 @@
+[
+    {
+        "quest": "Tìm mô tả đúng nhất cho hàm TinhTong sau:\nint TinhTong(int N)\n{ int so = 2; int tong = 0; int dem = 0;\nwhile (dem <N)\n{\nif (KiemTra(so) == 1)\n{\ntong = tong + so;\ndem ++;\n}\nso = so + 1;\n}\nreturn tong;\n} Trong đó\nint KiemTra(int so)\n{\nfor (int i = 2; i<so; i++)\nif (so%i == 0)\nreturn 0;\nreturn 1;\n}\n \n",
+        "correct": "C",
+        "A": "A. Hàm tính tổng N số nguyên đầu tiên",
+        "B": "B. Hàm tính tổng N số nguyên tố nhỏ hơn N",
+        "C": "C. Cả a, b đều sai",
+        "D": "D. Cả a, b đều đúng "
+    },
+    {
+        "quest": "Mối quan hệ giữa cấu trúc dữ liệu và giải thuật có thể minh họa bằng đẳng thức:\n",
+        "correct": "A",
+        "A": "A. Cấu trúc dữ liệu + Giải thuật = Chương trình",
+        "B": "B. Cấu trúc dữ liệu + Chương trình = Giải thuật",
+        "C": "C. Chương trình + Giải thuật = Cấu trúc dữ liệu",
+        "D": "D. Cấu trúc dữ liệu = Chương trình"
+    },
+    {
+        "quest": "Các tiêu chuẩn đánh giá cấu trúc dữ liệu. Để đánh giá một cấu trúc dữ liệu chúng ta thường dựa vào một số tiêu chí:\n",
+        "correct": "D",
+        "A": "A. Cấu trúc dữ liệu phải tiết kiệm tài nguyên (bộ nhớ trong)",
+        "B": "B. Cấu trúc dữ liệu phải phản ảnh đúng thực tế của bài toán",
+        "C": "C. Cấu trúc dữ liệu phải dễ dàng trong việc thao tác dữ liệu",
+        "D": "D. Cả a, b, c đều đúng"
+    },
+    {
+        "quest": "Đoạn mã giả dưới đây mô tả thuật toán gì?\nThuật toán:\nB1: k = 1\nB2: IF M[k] == X AND k != N\nB2.1: k++\nB2.2: Lặp lại B2\nB3: IF k < N Thông báo tìm thấy tại vị trí k\nB4: ELSE Không tìm thấy.\nB5: Kết thúc\n",
+        "correct": "C",
+        "A": "A. Tìm nhị phân phần tử có giá trị X",
+        "B": "B. Tìm phần tử nhỏ nhất của mảng M bao gồm N phần tử",
+        "C": "C. Tìm tuyến tính phần tử có giá trị X",
+        "D": "D.  Cả a, b, c đều sai"
+    },
+    {
+        "quest": "Cho hàm tìm kiếm tuyến tính như sau:\nint TimKiem (int M[], int N, int X)\n{ int k = 0;\nM[N] = X;\nwhile (M[k] != X)\nk++;\nif (k < N)\nreturn (k);\nreturn (-1);\n}\nChọn câu đúng nhất: \n",
+        "correct": "C",
+        "A": "A. Hàm sẽ trả về 0 nếu không tìm thấy phần tử có giá trị là X",
+        "B": "B. Hàm sẽ trả về 1 nếu tìm thấy phần tử có giá trị là X",
+        "C": "C. Hàm sẽ trả về -1 nếu không tìm thấy phần tử có giá trị là X",
+        "D": "D. Hàm sẽ trả về 1 nếu không tìm thấy phần tử có giá trị là X"
+    },
+    {
+        "quest": "Xét thủ tục sau:\nint TimKiemNP (int M[], int First, int Last, int X)\n{\nif (First > Last)\nreturn (-1);\nint Mid = (First + Last)/2;\nif (X == M[Mid])\nreturn (Mid);\nif (X < M[Mid])\nreturn(TimKiemNP (M, First, Mid – 1, X));\nelse\nreturn(TimKiemNP (M, Mid + 1, Last, X));\n}\nLựa chọn câu đúng nhất để mô tả thủ tục trên:\n",
+        "correct": "B",
+        "A": "A. Thủ tục hỗ trợ tìm kiếm phần tử có giá trị là X trên mảng các phần tử từ chỉ số từ First đến chỉ số Last",
+        "B": "B. Thủ tục hỗ trợ tìm kiếm đệ quy phần tử có giá trị là X trên mảng các phần tử từ chỉ số từ First đến chỉ số Last ",
+        "C": "C. Thủ tục hỗ trợ tìm kiếm đệ quy phần tử có giá trị là X trên mảng các phần tử từ chỉ số từ Last đến chỉ số First",
+        "D": "D. Thủ tục hỗ trợ tìm kiếm không đệ quy phần tử có giá trị là X trên mảng các phần tử từ chỉ số từ Last đến chỉ số First"
+    },
+    {
+        "quest": "Chọn câu đúng nhất để mô tả thuật toán sắp xếp nổi bọt (Bubble Sort) trên mảng M có N phần tử: \n",
+        "correct": "A",
+        "A": "A.  Đi từ cuối mảng về đầu mảng, trong quá trình đi nếu phần tử ở dưới (đứng phía sau) nhỏ hơn phần tử đứng ngay trên (trước) nó thì hai phần tử này sẽ được đổi chỗ cho nhau. Sau mỗi lần đi chúng ta đưa được một phần tử trồi lên đúng chỗ. Sau N–1 lần đi thì tất cả các phần tử trong mảng M sẽ có thứ tự tăng",
+        "B": "B. Đi từ đầu mảng về cuối mảng, trong quá trình đi nếu phần tử ở dưới (đứng phía sau) nhỏ hơn phần tử đứng ngay trên (trước) nó thì hai phần tử này sẽ được đổi chỗ cho nhau. Sau mỗi lần đi chúng ta đưa được một phần tử trồi lên đúng chỗ. Sau N lần đi thì tất cả các phần tử trong mảng M sẽ có thứ tự tăng.",
+        "C": "C. Đi từ cuối mảng về đầu mảng, trong quá trình đi nếu phần tử ở dưới (đứng phía sau) nhỏ hơn phần tử đứng ngay trên (trước) nó thì hai phần tử này sẽ được đổi chỗ cho nhau. Sau mỗi lần đi chúng ta đưa được một phần tử trồi lên đúng chỗ. Sau N lần đi thì tất cả các phần tử trong mảng M sẽ có thứ tự tăng",
+        "D": "D. Cả a, b, c đều sai"
+    },
+    {
+        "quest": "Hàm mô tả sắp xếp nổi bọt (Bubble Sort) trên mảng M có N phần tử\nvoid BubbleSort(int M[], int N) \n{\n[2] int Temp;\n[3] for (int I = 0; I < N-1; I++)\n[4] …………………………………..\n[5] if (M[J] < M[J-1])\n[6] {\n[7] Temp = M[J];\n[8] M[J] = M[J-1];\n[9] M[J-1] = Temp;\n[10] }\n[11] return;\n[12] }\n[13]\nLệnh nào sau đây sẽ được đưa vào dòng lệnh thứ [5] của thủ tục:\n",
+        "correct": "C",
+        "A": "A. for (int J = N-1; J > I; J++)",
+        "B": "B. for (int J = N; J < I; J--)",
+        "C": "C.  for (int J = N-1; J > I; J--)",
+        "D": "D. Không có dòng lệnh nào phù hợp, không cần thêm vào thuật toán vẫn chạy đúng"
+    },
+    {
+        "quest": "Thủ tục mô tả thuật toán sắp xếp chọn trực tiếp (Straight Selection Sort):\nvoid SapXepChonTrucTiep(T M[], int N)\n{\nint K = 0, PosMin;\nint Temp;\nwhile (K < N-1)\n{ T Min = M[K];\nPosMin = K;\nfor (int Pos = K+1; Pos < N; Pos++)\nif (Min > M[Pos])\n{\nMin = M[Pos];\nPosMin = Pos \n}\n} ...................................\n[1] ...................................\n[2] ...................................\n[3] K++;\n}\nreturn; \n}\nChọn câu lệnh thích hợp để đưa vào [1], [2], [3] với mục tiêu hoán vị M[K] và M[PosMin]\n",
+        "correct": "D",
+        "A": "A. Temp = M[K] ; Temp = M[PosMin]; M[PosMin] = Temp;",
+        "B": "B. M[K] = Temp; M[K] = M[PosMin]; M[PosMin] = Temp ;",
+        "C": "C. Temp = M[K] ; M[PosMin] = M[K]; M[PosMin] = Temp ;",
+        "D": "D. Temp = M[K] ; M[K] = M[PosMin]; M[PosMin] = Temp ;"
+    },
+    {
+        "quest": "Đối với thuật toán sắp xếp chọn trực tiếp cho dãy các phần tử sau (10 pt) 16 60 2 25 15 45 5 30 33 20\nCần thực hiện ..................... chọn lựa phần tử nhỏ nhất để sắp xếp mảng M có thứ tự tăng dần.\n",
+        "correct": "C",
+        "A": "A. 7 lần ",
+        "B": "B. 8 lần",
+        "C": "C. 9 lần",
+        "D": "D. 10 lần"
+    },
+    {
+        "quest": "Thuật toán sắp xếp chèn trực tiếp (Straight Insertion Sort) được mô tả bằng đoạn mã giả như sau:\nB1: K = 1\nB2: IF (K = N) Thực hiện BKT\nB3: X = M[K+1]\nB4: Pos = 1\nB5: IF (Pos > K) Thực hiện B7\nB6: ELSE // Tìm vị trí chèn\nB6.1: If (X <= M[Pos]) Thực hiện B7\nB6.2: Pos++\nB6.3: Lặp lại B6.1\nB7: I = K+1 B8: IF (I > Pos)\nB8.1: M[I] = M[I-1]\nB8.2: I--\nB8.3: Lặp lại B8\nB9: ELSE\nB9.1: M[Pos] = X\nB9.2: K++\nB9.3: Lặp lại B2\nBKT: Kết thúc Trong đó B8 mô tả trường hợp\n",
+        "correct": "C",
+        "A": "A. Nếu còn phải dời các phần tử từ Pos->I về phía sau 1 vị trí",
+        "B": "B. Nếu còn phải dời các phần tử từ Pos->K+1 về phía sau 1 vị trí",
+        "C": "C. Nếu còn phải dời các phần tử từ Pos->K về phía sau 1 vị trí",
+        "D": "D. Nếu còn phải dời các phần tử từ Pos->I+1 về phía sau 1 vị trí"
+    },
+    {
+        "quest": "Giả sử cần sắp xếp mảng M có N phần tử sau theo phương pháp sắp xếp chèn trực tiếp 11 16 12 75 51 54 5 73 36 52 98\nCần thực hiện ..................... chèn các phần tử vào dãy con đã có thứ tự tăng đứng đầu dãy M để sắp xếp mảng M có thứ tự tăng dần.\n",
+        "correct": "D",
+        "A": "A. 7 lần",
+        "B": "B. 8 lần",
+        "C": "C. 9 lần",
+        "D": "D. 10 lần"
+    },
+    {
+        "quest": "Lựa chọn định nghĩa về danh sách đúng nhất?\n",
+        "correct": "D",
+        "A": "A. Danh sách là tập hợp các phần tử có kiểu dữ liệu xác định và giữa chúng có một mối liên hệ nào đó",
+        "B": "B. Số phần tử của danh sách gọi là chiều dài của danh sách",
+        "C": "C. Một danh sách có chiều dài bằng 0 là một danh sách rỗng",
+        "D": "D. Cả a, b, c đều đúng"
+    },
+    {
+        "quest": "Tìm mô tả đúng cho hàm sau:\nint SC (int M[], int Len, int CM[])\n{ for (int i = 0; i < Len; i++)\nCM[i] = M[i];\nreturn (Len);\n}\n",
+        "correct": "D",
+        "A": "A. Hàm thực hiện việc sao chép nội dung mảng CM có chiều dài Len về mảng M có cùng chiều dài. Hàm trả về chiều dài của mảng M sau khi sao chép",
+        "B": "B. Hàm thực hiện việc sao chép nội dung mảng M có chiều dài Len -1 về mảng CM có cùng chiều dài. Hàm trả về chiều dài của mảng CM sau khi sao chép",
+        "C": "C. Hàm thực hiện việc sao chép nội dung mảng CM có chiều dài Len -1 về mảng M có cùng chiều dài. Hàm trả về chiều dài của mảng M sau khi sao chép",
+        "D": "D.  Hàm thực hiện việc sao chép nội dung mảng M có chiều dài Len về mảng CM có cùng chiều dài. Hàm trả về chiều dài của mảng CM sau khi sao chép"
+    },
+    {
+        "quest": "Cấu trúc dữ liệu mảng có các ưu điểm nào?\n",
+        "correct": "D",
+        "A": "A. Việc thêm, bớt các phần tử trong danh sách đặc có nhiều khó khăn do phải di dời các phần tử khác đi qua chỗ khác",
+        "B": "B. Việc truy xuất và tìm kiếm các phần tử của mảng là dễ dàng vì các phần tử đứng liền nhau nên chúng ta chỉ cần sử dụng chỉ số để định vị vị trí các phần tử trong danh sách (định vị địa chỉ các phần tử)",
+        "C": "C. Mật độ sử dụng bộ nhớ của mảng là tối ưu tuyệt đối",
+        "D": "D. Câu a, b, c đúng"
+    },
+    {
+        "quest": "Định nghĩa nào là đúng với danh sách liên kết?\n",
+        "correct": "C",
+        "A": "A. Danh sách liên kết là cấu trúc dữ liệu dạng cây",
+        "B": "B. Danh sách liên kết là cấu trúc dữ liệu tự định nghĩa",
+        "C": "C.  Danh sách liên kết là tập hợp các phần tử mà giữa chúng có một sự nối kết với nhau thông qua vùng liên kết của chúng",
+        "D": "D. Danh sách liên kết là tập hợp các phần tử mà đặt kề cận với nhau trong vùng nhớ"
+    },
+    {
+        "quest": "Định nghĩa cấu trúc dữ liệu của danh sách liên kết đơn được mô tả như sau:\ntypedef struct Node\n{ int Key;\nNode * NextNode;\n} OneNode;\nTrong đó, khai báo Node * NextNode; dùng để mô tả:\n",
+        "correct": "B",
+        "A": "A. Con trỏ trỏ tới phần dữ liệu",
+        "B": "B. Vùng liên kết quản lý địa chỉ phần tử kế tiếp",
+        "C": "C. Con trỏ trỏ tới địa chỉ vùng nhớ của phần tử trước đó trong danh sách liên kết đơn",
+        "D": "D. Con trỏ trỏ tới địa chỉ vùng nhớ của phần tử đầu tiên trong danh sách liên kết đơn"
+    },
+    {
+        "quest": "Với cấu trúc dữ liệu của danh sách liên kết đơn lưu trữ thông tin về phòng máy:\ntypedef struct PM\n{\nint maPM; int tongsoMay;\n} PHONGMAY;\ntypedef struct Node { PHONGMAY Data; Node * NextNode;\n} OneNode;\ntypedef OneNode * SLLPointer;\nĐể quản lý danh sách liên kết đơn bằng phần tử đầu và phần tử cuối, cần định nghĩa kiểu dữ liệu:\n",
+        "correct": "B",
+        "A": "A. SLLPointer DanhSach;",
+        "B": "B.  typedef struct SSLLIST { SLLPointer First; SLLPointer Last; } LIST; LIST DanhSach; ",
+        "C": "C. typedef struct SSLLIST { SLLPointer First; SLLPointer Last; int total; } LIST; LIST DanhSach;",
+        "D": "D. typedef struct SSLLIST { SLLPointer First; int total; } LIST; LIST DanhSach;"
+    },
+    {
+        "quest": "Tổ chức cấu trúc dữ liệu cho danh sách liên kết đơn:\ntypedef struct Node\n{ int Data; Node * Link;\n} OneNode; typedef OneNode * SLLPointer;\nMã giả thuật toán thêm một phần tử có giá trị thành phần dữ liệu là NewData vào trong danh sách liên kết đơn SLList vào ngay sau nút có địa chỉ InsNode:\nB1: NewNode = new OneNode\nB2: IF (NewNode = NULL) Thực hiện BKT\nB3: NewNode ->Link = NULL\nB4: NewNode ->Data = NewData\nB5: IF (InsNode-> Link = NULL)\nB5.1: InsNode-> Link = NewNode\nB5.2: Thực hiện BKT // Nối các nút kế sau InsNode vào sau NewNode\nB6: ………………………………………………..\n// Chuyển mối liên kết giữa InsNode với nút kế của nó về NewNode\nB7: ………………………………………………..\nBKT: Kết thúc\nB6 và B7 dùng để nối nút kế sau InsNode vào sau NewNode và chuyển mối liên kết giữa InsNode với nút kế nó về NewNode.\nHãy chọn câu đúng nhất cho B6 và B7\n",
+        "correct": "D",
+        "A": "A. B6: InsNode-> Link = NewNode-> Link B7: NewNode = InsNode-> Link",
+        "B": "B. B6: InsNode-> Link = NewNode-> Link B7: InsNode-> Link = NewNode",
+        "C": "C. B6: NewNode-> Link = InsNode-> Link B7: NewNode = InsNode-> Link",
+        "D": "D. B6: NewNode-> Link = InsNode-> Link B7: InsNode-> Link = NewNode"
+    },
+    {
+        "quest": "Với định nghĩa cấu trúc dữ liệu cho danh sách liên kết đơn:\ntypedef struct Node\n{\nint Data; Node * Link;\n} OneNode;\ntypedef OneNode * SLLPointer;\nHàm dưới đây để thêm một phần tử có giá trị thành phần dữ liệu là NewData vào trong danh sách liên kết đơn SLList vào ngay sau nút có địa chỉ InsNode.\nSLLPointer ThemGiua(SLLPointer &SList, int NewData, SLLPointer &InsNode)\n{ SLLPointer NewNode = new OneNode;\nif (NewNode != NULL)\nNewNode ->NextNode = NULL;\nNewNode ->Data = NewData;\nelse\nreturn (NULL);\nif (InsNode->Link == NULL)\n{\nInsNode-> Link = NewNode; return (SList);\n}\n…………………………………………………………….\n…………………………………………………………….\nreturn (SList);\n}\nHãy lựa chọn câu đúng nhất:\n",
+        "correct": "B",
+        "A": "A. InsNode -> Link = NewNode -> Link; InsNode-> Link = NewNode;",
+        "B": "B. NewNode-> Link = InsNode-> Link; InsNode-> Link = NewNode;",
+        "C": "C. InsNode -> Link = NewNode -> Link; NewNode = InsNode-> Link;",
+        "D": "D. NewNode-> Link = InsNode-> Link; NewNode = InsNode-> Link;"
+    },
+    {
+        "quest": "Cấu trúc dữ liệu nào tương ứng với LIFO:\n",
+        "correct": "D",
+        "A": "A. Queue",
+        "B": "B. Linked List",
+        "C": "C. Tree",
+        "D": "D. Stack"
+    },
+    {
+        "quest": "Lựa chọn câu đúng nhất về danh sách liên kết đôi (Doubly Linked List):\n",
+        "correct": "C",
+        "A": "A. Vùng liên kết của một phần tử trong danh sách liên đôi có 02 mối liên kết với 01 phần tử khác trong danh sách",
+        "B": "B. Vùng liên kết của một phần tử trong danh sách liên đôi có 01 mối liên kết với 02 phần tử khác trong danh sách",
+        "C": "C. Vùng liên kết của một phần tử trong danh sách liên đôi có 02 mối liên kết với 02 trước và sau nó trong danh sách",
+        "D": "D. Vùng liên kết của một phần tử trong danh sách liên đôi có 02 mối liên kết với phần tử đầu và cuối của danh sách"
+    },
+    {
+        "quest": "Cho thuật toán tìm nhị phân không đệ quy sau:\nint NRecBinarySearch (int M[], int N, int X)\n{ int First = 0;\nint Last = N – 1;\nwhile (First <= Last)\n{\nint Mid = (First + Last)/2;\nif (X == M[Mid])\nreturn(Mid);\nif (X < M[Mid])\nLast = Mid – 1;\nelse\nFirst = Mid + 1;\n}\nreturn(-1);\n} \nChọn câu đúng nhất trong trường hợp tốt nhất khi phần tử ở giữa của mảng có giá trị bằng X: \n",
+        "correct": "A",
+        "A": "A. Số phép gán: Gmin = 3 Số phép so sánh: Smin = 2",
+        "B": "B. Số phép gán: Gmin = 2 Số phép so sánh: Smin = 3",
+        "C": "C. Số phép gán: Gmin = 2 Số phép so sánh: Smin = 2",
+        "D": "D. Số phép gán: Gmin = 0 Số phép so sánh: Smin = 2"
+    },
+    {
+        "quest": "Cho thuật toán sắp xếp Bubble Sort như sau:\nvoid BubbleSort(int M[], int N)\n{\nfor (int I = 0; I < N-1; I++)\nfor (int J = N-1; J > I; J--)\nif (M[J] < M[J-1])\nSwap(M[J], M[J-1]);\nreturn;\n} \nChọn câu đúng nhất cho hàm Swap\n",
+        "correct": "A",
+        "A": "A. void Swap(int &X, int &Y) { int Temp = X; X = Y; Y = Temp; return; }",
+        "B": "B. void Swap(float X, floatY) { int Temp = X; X = Y; Y = Temp; return; }",
+        "C": "C. void Swap(int *X, int *Y) { int Temp = X; X = Y; Y = Temp; return; }",
+        "D": "D. void Swap(int X, intY) { int Temp = X; X = Y; Y = Temp; return; }"
+    },
+    {
+        "quest": "Cho cây biểu thức sau:\n                                                \nChọn biểu thức tương ứng với cây \n",
+        "correct": "A",
+        "A": "A.  (2 * (4 + (5 + 3)))",
+        "B": "B. . (4 * (2+ (5 + 3)))",
+        "C": "C. (2 * (3 + (5 +4)))",
+        "D": "D. (2 * (5 + (4+ 3)))"
+    },
+    {
+        "quest": "Cho thuật toán sau:\nint LinearSearch (int M[], int N, int X)\n{ int k = 0;\nwhile (M[k] != X k < N )\nk++;\nif (k < N )\nreturn (k);\nreturn (-1);\n}\nChọn câu đúng nhất trong trường hợp xấu nhất khi không tìm thấy phần tử nào có giá trị bằng X:\n",
+        "correct": "A",
+        "A": "A. Số phép gán: Gmax = 1 Số phép so sánh: Smax = 2N+1",
+        "B": "B. Số phép gán: Gmax = 2 Số phép so sánh: Smax = 2N+1 ",
+        "C": "C. Số phép gán: Gmax = 1 Số phép so sánh: Smax = 2N+2",
+        "D": "D. Số phép gán: Gmax = 1 Số phép so sánh: Smax = N+2"
+    },
+    {
+        "quest": "Cho thuật toán sau:\nint LinearSearch (float M[], int N, float X)\n{\nint k = 0;\nM[N] = X;\nwhile (M[k] != X) //n+1 lan\n(M[k] != X) //n+1 lan k++;\nif (k < N)\nreturn (k);\nreturn (-1);\n}\nChọn câu đúng nhất trong trường hợp xấu nhất khi không tìm thấy phần tử nào có giá trị bằng X:\n",
+        "correct": "B",
+        "A": "A. Số phép gán: Gmax = 1 Số phép so sánh: Smax = N + 2",
+        "B": "B.  Số phép gán: Gmax = 2 Số phép so sánh: Smax = N + 2",
+        "C": "C. Số phép gán: Gmax = 2 Số phép so sánh: Smax = N + 1",
+        "D": "D. Số phép gán: Gmax = 2  Số phép so sánh: Smax =2 N + 2"
+    },
+    {
+        "quest": "Cấu trúc dữ liệu cho kiểu dữ liệu sinh viên như sau:\ntypedef struct tagSV{\nchar MSSV[8];\nchar Ten[30];\nchar NgaySinh[11];\nfloat DTB;\n}SV;\nKhai báo\nSV sv1, *sv2;\nLựa chọn các câu đúng nhất để gán giá trị cho mã sinh viên của sv1 và sv2:\n",
+        "correct": "B",
+        "A": "A. sv1.MSSV = “Nguyen Van A”; sv2.MSSV = “Nguyen Van B”;",
+        "B": "B. sv1.MSSV = “Nguyen Van A”; sv2->MSSV = “Nguyen Van B”;",
+        "C": "C. sv1->MSSV = “Nguyen Van A”; sv2->MSSV = “Nguyen Van B”;",
+        "D": "D. sv1->MSSV = “Nguyen Van A”; sv2.MSSV = “Nguyen Van B”;"
+    },
+    {
+        "quest": "Với thủ tục như sau:\nvoid operation()\n{\n int x,a[10],n; \nint x,m,l,h,flag=0;\ncout<<\"Enter the element to be searched:\";\ncin>>x;\nl=0; h=n-1;\n while(l<=h)\n {\nm=(l+h)/2;\n if(x==a[m]) {\nlag=1; break;\n}\nelse if(x>a[m])\nl=m+1;\nelse if(x<a[m]) \nh=m-1;\n}\n if(flag==0)\ncout<<\"ABSENT\";\nelse\ncout<<\"PRESENT\";\n}\nLựa chọn câu đúng nhất để mô tả thủ tục trên\n",
+        "correct": "B",
+        "A": "A. Thủ tục tìm nhị phân phần tử được nhập từ bàn phím, nếu tìm thấy sẽ thông báo ABSENT",
+        "B": "B. Thủ tục tìm nhị phân phần tử được nhập từ bàn phím, nếu không tìm thấy sẽ thông báo ABSENT",
+        "C": "C. Thủ tục tìm tuyến tính phần tử được nhập từ bàn phím, nếu tìm thấy sẽ thông báo ABSENT",
+        "D": "D. Thủ tục tìm tuyến tính phần tử được nhập từ bàn phím, nếu không tìm thấy sẽ thông báo ABSENT"
+    },
+    {
+        "quest": "Biểu diễn và tổ chức ngăn xếp (Stack) bằng danh sách liên kết giả sử bề mặt của ngăn xếp là đầu danh sách liên kết:\ntypedef struct SElement\n{ T Key;\nSElement *Next;\n} SOneElement;\ntypedef struct SOneElement *SSTACK;\nSSTACK SSP;\nThêm 1 phần tử vào ngăn xếp (dùng cấu trúc dữ liệu mô tả ở trên)\nB1: NewElement = Khởi tạo nút mới (dùng toán tử new)\nB2: if (NewElement == NULL)\nThực hiện BKT\nB3: if (SSP == NULL)\nB3.1: SSP = NewElement\nB3.2: Thực hiện BKT\nB4: …………………………………………\nB5: …………………………………………\nBKT: Kết thúc\nChọn câu lệnh chính xác cho B4 và B5\n",
+        "correct": "A",
+        "A": "A. B4: NewElement ->Next = SSP SSP = NewElement",
+        "B": "B. B4: SSP = NewElement ->Next B5: SSP = NewElement",
+        "C": "C. B4: SSP = NewElement ->Next B5: NewElement = SSP",
+        "D": "D. B4: NewElement ->Next = SSP B5: NewElement = SSP"
+    },
+    {
+        "quest": "Cấu trúc dữ liệu biểu diễn hàng đợi bằng danh sách liên kết:\ntypedef struct QElement\n{ T Key;\nQElement *Next;\n} QOneElement;\ntypedef QElement *QType;\nCấu trúc dữ liệu quản lý hàng đợi bằng hai phần tử đầu (Front) và cuối (Rear):\ntypedef struct QPElement\n{ QType Font;\nQType Rear; \n} SQUEUE;\nSQUEUE SQList;\nThêm phần tử vào sau phần tử Rear. Giả sử dữ liệu đưa vào hàng đợi là NewData, mã giả được mô tả như sau:\nB1: NewElement = Khởi tạo nút mới có thành phần NewData\nB2: IF (NewElement == NULL)\nThực hiện BKT\nB3: IF (SQList.Front == NULL) // hàng đợi dang rỗng\nB3.1: SQList.Front = SQList.Rear = NewElement\nB3.2: Thực hiện BKT\nB4: …………………………………………..\nB5: …………………………………………..\nBKT: Kết thúc\nChọn câu đúng nhất cho bước B4, B5\n",
+        "correct": "B",
+        "A": "A. B4: SQList.Front->Next = NewElement B5: SQList.Front = NewElement",
+        "B": "B. B4: SQList.Rear->Next = NewElement B5: SQList.Rear = NewElement",
+        "C": "C. B4: NewElement = SQList.Rear->Next B5: SQList.Rear = NewElement",
+        "D": "D. B4: NewElement = SQList.Front->Next B5: SQList.Font = NewElement"
+    },
+    {
+        "quest": "Chọn định nghĩa đúng nhất về hàng đợi (Queue):\n",
+        "correct": "B",
+        "A": "A. Hàng đợi còn được gọi là danh sách FILO và cấu trúc dữ liệu này còn được gọi cấu trúc FILO (First In Last Out)",
+        "B": "B. Hàng đợi là một danh sách mà trong đó thao tác thêm 1 phần tử vào trong danh sách được thực hiện 1 đầu này và lấy 1 phần tử trong danh sách lại thực hiện bởi đầu kia",
+        "C": "C. Hàng đợi là một danh sách mà trong đó thao tác thêm 1 phần tử hay hủy một phần tử trong danh sách được thực hiện 1 đầu",
+        "D": "D. Hàng đợi phải là một danh sách liên kết đơn"
+    },
+    {
+        "quest": "Chiều dài đường đi của một cây (path’s length of the tree) được định nghĩa là tổng tất cả các chiều dài đường đi của tất cả các nút trên cây. Xét cây sau:\n                                                            \n",
+        "correct": "C",
+        "A": "A. Chiều dài đường của cây trên là 63",
+        "B": "B. Chiều dài đường của cây trên là 64",
+        "C": "C. Chiều dài đường của cây trên là 65",
+        "D": "D. Chiều dài đường của cây trên là 66"
+    },
+    {
+        "quest": "Chọn định nghĩa đúng nhất đối với cây nhị phân tìm kiếm:\n",
+        "correct": "A",
+        "A": "A. Cây nhị phân tìm kiếm là cây nhị phân có thành phần khóa của mọi nút lớn hơn thành phần khóa của tất cả các nút trong cây con trái của nó và nhỏ hơn thành phần khóa của tất cả các nút trong cây con phải của nó",
+        "B": "B. Cây nhị phân tìm kiếm là cây nhị phân có thành phần khóa của mọi nút nhỏ hơn thành phần khóa của tất cả các nút trong cây con trái của nó và nhỏ hơn thành phần khóa của tất cả các nút trong cây con phải của nó",
+        "C": "C. Cây nhị phân tìm kiếm là cây nhị phân có thành phần khóa của mọi nút lớn hơn thành phần khóa của tất cả các nút trong cây con trái của nó và lớn hơn thành phần khóa của tất cả các nút trong cây con phải của nó.",
+        "D": "D. Cây nhị phân tìm kiếm chính là cây nhị phân"
+    },
+    {
+        "quest": "Chọn định nghĩa đúng nhất về cây cân bằng tương đối:\n",
+        "correct": "C",
+        "A": "A. Cây cân bằng tương đối là một cây nhị phân thỏa mãn điều kiện là đối với mọi nút của cây thì số nút của cây con trái và số nút của cây con phải của nút đó hơn kém nhau không quá 1. Cây cân bằng tương đối còn được gọi là cây AVL (AVL tree)",
+        "B": "B. Cây cân bằng tương đối là một cây N phân thỏa mãn điều kiện là đối với mọi nút của cây thì chiều cao của cây con trái và chiều cao của cây con phải của nút đó hơn kém nhau không quá 2. Cây cân bằng tương đối còn được gọi là cây AVL (AVL tree)",
+        "C": "C.  Cây cân bằng tương đối là một cây nhị phân thỏa mãn điều kiện là đối với mọi nút của cây thì chiều cao của cây con trái và chiều cao của cây con phải của nút đó hơn kém nhau không quá 1. Cây cân bằng tương đối còn được gọi là cây AVL (AVL tree)",
+        "D": "D. Cây cân bằng tương đối cũng là cây cân bằng hoàn toàn"
+    },
+    {
+        "quest": "Định nghĩa cấu trúc dữ liệu của danh sách liên kết đơn được mô tả như sau:\nstruct Node\n{\nint Key; Node *\nNextNode;\n} OneNode;\nTrong đó, khai báo Node * NextNode; dùng để mô tả\n",
+        "correct": "B",
+        "A": "A. Con trỏ trỏ tới phần dữ liệu",
+        "B": "B. Vùng liên kết quản lý địa chỉ phần tử kế tiếp",
+        "C": "C. Con trỏ trỏ tới phần dữ liệu cuối của danh sách",
+        "D": "D. Vùng liên kết quản lý địa chỉ phần tử kế tiếp của phần tử cuối"
+    },
+    {
+        "quest": "Khi cần thêm một phần tử có giá trị thành phần dữ liệu là NewData (là một số nguyên) vào đầu của danh sách liên kết đơn dùng thuật toán có mã giả mô tả như dưới đây?\ntypedef struct Node\n{\nint Data; Node * NextNode;\n} OneNode; typedef OneNode * SLLPointer;\nSLLPointer SSList;\nB1: NewNode = new OneNode\nB2: IF (NewNode = NULL) Thực hiện BKT\nB3: NewNode ->NextNode = NULL\nB4: NewNode ->Data = NewData B5: NewNode->NextNode = SLList\nB6: SLList = NewNode BKT: Kết thúc\nTìm mô tả chính xác cho B5\n",
+        "correct": "D",
+        "A": "A. Chuyển vai trò đứng đầu của NewNode cho SLList",
+        "B": "B. Nối NewNode vào sau SLList",
+        "C": "C. Chuyển vai trò đứng đầu của SLList cho NewNode",
+        "D": "D. Nối SLList vào sau NewNode"
+    },
+    {
+        "quest": "Tìm kiếm xem trong danh sách liên kết đơn có tồn tại nút có thành phần dữ liệu là SearchData hay không. Thao tác này chúng ta vận dụng thuật toán tìm tuyến tính để tìm kiếm:\ntypedef struct Node\n{\nint Data;\nNode * Link; \n} OneNode;'\ntypedef OneNode * Pointer;\nPointer SSList; // Quản lý danh sách liên kết đơn bởi 1 phần tử đầu\nB1: CurNode = SLList\nB2: IF (………………………………………………)\nThực hiện BKT\nB3: CurNode = CurNode->Link\nB4: Lặp lại B2\nBKT: Kết thúc \nChọn điều kiện hợp lý cho mã giả ở B2\n",
+        "correct": "C",
+        "A": "A. CurNode != NULL OR CurNode->Data = SearchData",
+        "B": "B. CurNode = NULL OR CurNode->Data != SearchData",
+        "C": "C. CurNode = NULL OR CurNode->Data = SearchData",
+        "D": "D. CurNode != NULL OR CurNode->Data != SearchData"
+    },
+    {
+        "quest": "Cho cấu trúc dữ liệu như sau:\ntypedef struct Node\n{ \nint Key;\nNode *NextNode;\n} OneNode;\ntypedef SLLOneNode * Type;\nThuật toán chọn trực tiếp viết trên ngôn ngữ C++ áp dụng cho danh sách liên kết đơn quản lý bởi một phần tử đầu tiên được mô tả:\nvoid StraightSelection(Type &SList)\n{ \nType MinNode;\nint Temp;\nType CurrNode,TempNode;\nCurrNode = SList;\nwhile (CurrNode!=NULL)\n{\nTempNode = CurrNode->NextNode;\nMinNode = CurrNode;\nwhile (TempNode!=NULL)\n{\nTempNode = CurrNode->NextNode;\nMinNode = CurrNode;\nwhile (TempNode!=NULL)\n{ \nif (………………………………………………)\nMinNode = TempNode; \nTempNode = TempNode->NextNode; \n}\n[1] Temp = MinNode->Key;\n[2] MinNode->Key = CurrNode->Key;\n[3] CurrNode->Key = Temp CurrNode=CurrNode->NextNode;\n}\n}\nTìm mô tả chính xác cho [1], [2], [3]\n",
+        "correct": "B",
+        "A": "A. Hoán vị 2 mối liên kết",
+        "B": "B. Hoán vị 2 vùng giá trị",
+        "C": "C. Hoán vị nút đầu và nút cuối",
+        "D": "D. Hoán vị 2 nút kế tiếp nhau"
+    },
+    {
+        "quest": "Với cấu trúc dữ liệu như sau:\ntypedef struct DNode\n{ \nint Key;\nDNode * NextNode;\nDNode * PreNode;\n} DOneNode\ntypedef DLLOneNode * DPointerType;\ntypedef struct DPairNode\n{ DPointerType DLLFirst;\nDPointerType DLLLast;\n} DPType;\nHàm thêm phần tử vào cuối danh sách liên kết đôi quản lý bởi 2 phần tử đầu và cuối\nDPointerType DLLAddLast(DPType &DList, int NewData)\n{ \nDPointerType NewNode = gọi hàm tạo nút mới có vùng dữ liệu là NewData ;\nif (NewNode == NULL)\nreturn (NULL);\nif (DList.DLLLast == NULL)\nDList.DLLFirst = DList.DLLLast = NewNode;\nelse\n{\n……………………………………………….\n……………………………………………….\n………………………………………………\n}\nreturn (NewNode);\n} Hãy lựa chọn câu đúng nhất để điền vào chỗ trống ở trên\n",
+        "correct": "D",
+        "A": "A. DList.DLLLast ->NextNode = NewNode; NewNode ->PreNode = DList.DLLLast; NewNode = DList.DLLLast;",
+        "B": "B. DList.DLLLast ->NextNode = NewNode; DList.DLLLast = NewNode ->PreNode; DList.DLLLast = NewNode;",
+        "C": "C. NewNode = DList.DLLLast ->NextNode; NewNode ->PreNode = DList.DLLLast; DList.DLLLast = NewNode;",
+        "D": "D. DList.DLLLast ->NextNode = NewNode; NewNode ->PreNode = DList.DLLLast; DList.DLLLast = NewNode;"
+    },
+    {
+        "quest": "Với cấu trúc dữ liệu như sau:\ntypedef struct DNode\n{ i\nnt Key;\nDNode * NextNode;\nDNode * PreNode;\n} DOneNode;\ntypedef DOneNode * DPointerType;\ntypedef struct DLLPairNode\n{ DPointerType DLLFirst;\nDPointerType DLLLast;\n} DLLPType;\nHàm duyệt qua các nút trong danh sách liên kết đôi quản lý bởi hai địa chỉ nút đầu tiên và nút cuối cùng thông qua DList để xem nội dung thành phần dữ liệu của mỗi nút\nvoid DLLTravelling (DLLPType DList) \n{\nDPointerType CurrNode = DList.DLLFirst;\nwhile (CurrNode != NULL) { cout <<\nCurrNode->Key; …………………………………\n}\nreturn;\n}\nChọn câu chính xác điền vào chỗ trống để mô tả việc di chuyển từ nút này sang nút khác\n",
+        "correct": "A",
+        "A": "A. CurrNode = CurrNode ->NextNode ;",
+        "B": "B. CurrNode = CurrNode ->Key ;",
+        "C": "C. CurrNode ->NextNode = CurrNode;",
+        "D": "D. CurrNode ->Key = CurrNode;"
+    },
+    {
+        "quest": "Với cấu trúc dữ liệu mô tả cho Stack:\ntypedef struct SElement\n{\nint Key;\nSElement *Next;\n} SOneElement;\ntypedef SOneElement *SSTACK;\nTìm mô tả chính xác cho hàm sau:\nvoid SSDelete (SSTACK &SList)\n{\nwhile (SList != NULL)\n{ SSTACK TempElement = SList;\nSList = SList ->Next;\nTempElement ->Next = NULL;\ndelete TempElement;\n}\n} \n",
+        "correct": "D",
+        "A": "A. Hủy phần tử đầu của Stack",
+        "B": "B. Hủy phần tử cuối của Stack",
+        "C": "C. Hủy phần tử cuối của Stack và lấy giá trị đó in ra màn hìn",
+        "D": "D. Hủy toàn bộ Stack"
+    },
+    {
+        "quest": "Kết quả nào đúng khi thực hiện giải thuật sau:\nlong lt(int n)\n{if (n==0) return 1;\nelse return (2*lt(n-1);\n}\n",
+        "correct": "D",
+        "A": "A.  lt(12) = 2010",
+        "B": "B. lt(12) = 1024",
+        "C": "C. lt(7) = 720",
+        "D": "D. lt(6) = 64 "
+    },
+    {
+        "quest": "Kết quả nào đúng khi thực hiện giải thuật sau với a[]= {1, 3, 5}; n= 5, k= 3:\n                                                             \n",
+        "correct": "D",
+        "A": "A.  2 3 4",
+        "B": "B. 1 2 3",
+        "C": "C. 2 3 5",
+        "D": "D. 1 4 5"
+    },
+    {
+        "quest": "Kết quả nào đúng khi thực hiện giải thuật sau với a[]= {-3, -3, 15, -3}; n= 4; x= -3:\nint FindX(int a[], int n, int x)\n{int i;\nfor (i= n; i>= 1; i--) if (a[i]==x) return (i);\nreturn (-1);\n}\n",
+        "correct": "D",
+        "A": "A. 1",
+        "B": "B. 2",
+        "C": "C. 3",
+        "D": "D. 4"
+    },
+    {
+        "quest": "Dấu hiệu nào dưới đây cho biết danh sách liên kết đơn L là rỗng:\n",
+        "correct": "D",
+        "A": "A. (L->left == NULL)",
+        "B": "B. (L->ìnfor == NULL)",
+        "C": "C. (L->next == NULL)",
+        "D": "D. (L == NULL)"
+    },
+    {
+        "quest": "Kết quả nào đúng khi thực hiện giải thuật sau với a[]= {1, 3, 5, 4, 2}; n= 5:\n                                                                    \n",
+        "correct": "A",
+        "A": "A. 1 4 2 3 5",
+        "B": "B. 5 4 3 2 1",
+        "C": "C. 1 4 5 3 2",
+        "D": "D. 1 3 4 2 5"
+    },
+    {
+        "quest": "Thao tác nào dưới đây thực hiện trên hàng đợi (queue):\n",
+        "correct": "A",
+        "A": "A. Thêm phần tử vào lối sau",
+        "B": "B. Loại bỏ phần tử ở lối sau",
+        "C": "C. Thêm phần tử vào lối trước",
+        "D": "D. Thêm và loại bỏ phần tử tại vị trí bất kỳ"
+    },
+    {
+        "quest": "Dấu hiệu nào dưới đây cho biết hàng đợi đã có thao tác thêm và loại bỏ phần tử là rỗng:\n",
+        "correct": "A",
+        "A": "A. Lối trước có giá trị > giá trị của lối sau",
+        "B": "B. Lối sau nhận giá trị = 0",
+        "C": "C. Lối trước có giá trị < giá trị của lối sau",
+        "D": "D. Lối trước nhận giá trị = 0"
+    },
+    {
+        "quest": " Thao tác nào dưới đây thực hiện trên ngăn xếp (stack):\n",
+        "correct": "C",
+        "A": "A. Thêm phần tử vào vị trí bất kỳ ",
+        "B": "B. Loại bỏ phần tử tại vị trí bất kỳ",
+        "C": "C. Thêm và loại bỏ phần tử luôn thực hiện tại vị trí đỉnh (top)",
+        "D": "D. Thêm và loại bỏ phần tử có thể thực hiện tại vị trí bất kỳ"
+    },
+    {
+        "quest": "Trong phép duyệt cây nhị phân có 24 nút theo thứ tự sau, nút gốc có thứ tự:\n",
+        "correct": "D",
+        "A": "A. Thứ 1",
+        "B": "B. Thứ 2",
+        "C": "C. Thứ 23",
+        "D": "D. Thứ 24"
+    },
+    {
+        "quest": "Nút có khóa nhỏ nhất trong cây nhị phân tìm kiếm khác rỗng là:\n",
+        "correct": "D",
+        "A": "A. Nút gốc",
+        "B": "B. Tất cả các nút",
+        "C": "C. Nút con bên phải nhất",
+        "D": "D. Nút con bên trái nhất"
+    },
+    {
+        "quest": "Cây nhị phân khác rỗng là cây:\n",
+        "correct": "C",
+        "A": "A. Mỗi nút (trừ nút lá) đều có hai nút con",
+        "B": "B. Tất cả các nút đều có nút con",
+        "C": "C. Mỗi nút có không quá 2 nút con",
+        "D": "D. Tất cả các nút đều có nút cha"
+    },
+    {
+        "quest": "Đồ thị G có n đỉnh và m cạnh với m, n thì ma trận kề của G luôn có dạng:\n",
+        "correct": "A",
+        "A": "A. là ma trận vuông cấp n",
+        "B": "B. là ma trận cấp nxm",
+        "C": "C. là ma trận vuông cấp m ",
+        "D": "D. là ma trận cấp mxn"
+    },
+    {
+        "quest": "Đồ thị vô hướng G có chu trình Euler khi và chỉ khi:\n",
+        "correct": "C",
+        "A": "A. G liên thông và mọi đỉnh  G có bậc chẵn",
+        "B": "B. mọi đỉnh G có bậc chẵn",
+        "C": "C. G có chu trình Hamilton",
+        "D": "D. G có đường đi Euler "
+    },
+    {
+        "quest": "Nhân tố nào là nhân tố chính ảnh hưởng đến thời gian tính của một giải thuật:\n",
+        "correct": "D",
+        "A": "A. Máy tính ",
+        "B": "B. Thuật toán được sử dụng",
+        "C": "C. Chương trình dịch",
+        "D": "D. Kích thước của dữ liệu đầu vào của thuật toán"
+    },
+    {
+        "quest": "Chọn phát biểu đúng trong các phát biểu dưới đây: bằng cách chạy thử 1 thuật toán với 1 bộ dữ liệu, ta có thể:\n",
+        "correct": "B",
+        "A": "A. Khẳng định thuật toán đúng nếu nó cho kết quả đúng",
+        "B": "B. Khẳng định thuật toán sai nếu cho kết quả sai ",
+        "C": "C. Khẳng định thuật toán tốt nếu cho kết quả nhanh",
+        "D": "D. Khẳng định thuật toán hiệu quả nếu cho kết quả đúng"
+    },
+    {
+        "quest": "Trong các mệnh đề sau đây, mệnh đề nào sai:\n",
+        "correct": "D",
+        "A": "A. Kiểu dữ liệu là một tập hợp nào đó các phần tử dữ liệu cùng chung một thuộc tính ",
+        "B": "B.  kiểu của một ngôn ngữ bao gồm các kiểu dữ liệu đơn và các phương pháp cho phép ta từ các kiểu dữ liệu đã có xây dựng nên các kiểu dữ liệu mới",
+        "C": "C. Cấu trúc dữ liệu là các dữ liệu phức tạp, được xây dựng nên từ các kiểu dữ liệu đã có, đơn giản hơn bằng các phương pháp liên kết nào đó",
+        "D": "D. Một trong ba mệnh đề trên là sai"
+    },
+    {
+        "quest": "Tìm mệnh đề sai trong các mệnh đề sau: Một cấu trúc dữ liệu bao gồm…\n",
+        "correct": "B",
+        "A": "A. Một tập hợp nào đó các dữ liệu thành phần",
+        "B": "B. Các dữ liệu thành phần đặt sát nhau trong bộ nhớ"
+    },
+    {
+        "quest": "Cho danh sách đặc có 10 phần tử. Khi thêm phần tử vào vị trí 4 trong danh sách, vòng lặp dịch chuyển tịnh tiến nội dung các phần tử L->Elements[i]=L->Elements[i+1] sẽ thực hiện:\n",
+        "correct": "A",
+        "A": "A. 4 lần",
+        "B": "B.  5 lần",
+        "C": "C. 6 lần ",
+        "D": "D. Tất cả đều sai"
+    },
+    {
+        "quest": "Cho danh sách đặc có 10 phần tử. Khi xóa phần tử ở vị trí 4 trong danh sách, vòng lặp dịch chuyển tịnh tiến nội dung các phần tử L->Elements[i]=L->Elements[i+1] : \n",
+        "correct": "C",
+        "A": "A. 4 lần",
+        "B": "B. 5 lần",
+        "C": "C. 6 lần",
+        "D": "D. Tất cả đều sai "
+    },
+    {
+        "quest": "Cho biểu thức a+b*((c-d)*e+f/h). Danh sách duyệt tiền tự của biểu thức đã cho là:\n",
+        "correct": "B",
+        "A": "A. + * a b + * - c d e / f h ",
+        "B": "B. + a * b + * - c d e / f h  ",
+        "C": "C. + a b * * e - c d + / f h",
+        "D": "D. + * a + b – c d * e / f h"
+    },
+    {
+        "quest": "Danh sách duyệt hậu tự của biểu thức trong câu 3 là:\n",
+        "correct": "C",
+        "A": "A. a c d - * e b * + f h / +",
+        "B": "B. a b c d - e * + f h / * +",
+        "C": "C. a b c d - e * f h / + * + ",
+        "D": "D. a b e c d * - f h / + * +"
+    },
+    {
+        "quest": "Danh sách duyệt theo mức của biểu thức đã cho trong câu 3 là:\n",
+        "correct": "A",
+        "A": "A. + a * b + * / - e f h c d  ",
+        "B": "B. a b + * + / - c d e f h *",
+        "C": "C. + * a + b – c d * e / f h ",
+        "D": "D. + * a b + * - c d e / f h"
+    },
+    {
+        "quest": "Trong các phát biểu sau, phát biểu nào đúng?\n",
+        "correct": "A",
+        "A": "A. Giá trị hàm EndList(L) và hàm FirstList(L) luôn luôn bằng nhau khi danh sách rỗng",
+        "B": "B. Giá trị hàm EndList(L) và hàm FirstList(L) luôn luôn khác nhau",
+        "C": "C. Giá trị hàm EndList(L) và hàm FirstList(L) bằng nhau hay không tùy thuộc vào phương pháp cài đặt danh sách",
+        "D": "D. Tất cả đều sai"
+    },
+    {
+        "quest": "Giải thuật là … câu lệnh chặt chẽ, rõ ràng và xác định một trình tự các thao tác trên các đối tượng dữ liệu\n \n",
+        "correct": "C",
+        "A": "A. một",
+        "B": "B. hai",
+        "C": "C. dãy"
+    },
+    {
+        "quest": "Sau một số … bước thực hiện giải thuật cho chúng ta đạt được kết quả mong muốn:\n",
+        "correct": "C",
+        "A": "A. vô hạn",
+        "B": "B. giới hạn",
+        "C": "C. hữu hạn",
+        "D": "D. thao tác"
+    },
+    {
+        "quest": "Đánh giá độ phức tạp của giải thuật là việc xác định … và … mà giải thuật cần để thực hiện giải một bài toán:\n",
+        "correct": "C",
+        "A": "A. Khoảng thời gian, độ khó",
+        "B": "B. Khoảng thời gian, độ khó",
+        "C": "C. Khoảng thời gian, dung lượng bộ nhớ máy tính",
+        "D": "D. Độ khó, dung lượng bộ nhớ máy tính"
+    },
+    {
+        "quest": "Các kiểu dữ liệu cơ bản là:\n",
+        "correct": "C",
+        "A": "A. các kiểu dữ liệu mà người lập trình được cung cấp sẵn từ máy tính",
+        "B": "B. các kiểu dữ liệu mà người lập trình được cung cấp sẵn từ ngôn ngữ tự nhiên",
+        "C": "C. các kiểu dữ liệu mà người lập trình được cung cấp sẵn từ ngôn ngữ lập trình",
+        "D": "D. các kiểu dữ liệu mà người lập trình được cung cấp sẵn từ ngôn ngữ máy"
+    },
+    {
+        "quest": "Chỉ ra kiểu dữ liệu cơ bản:\n",
+        "correct": "B",
+        "A": "A. Sinh viên",
+        "B": "B. Float",
+        "C": "C. Họtên",
+        "D": "D. Ngày sinh"
+    },
+    {
+        "quest": "Chỉ ra kiểu dữ liệu không cơ bản:\n",
+        "correct": "D",
+        "A": "A. Char",
+        "B": "B. int",
+        "C": "C. long",
+        "D": "D. struct"
+    },
+    {
+        "quest": "Kiểu dữ liệu trừu tượng là …\n",
+        "correct": "D",
+        "A": "A. Kiểu dữ liệu mà người lập trình phải tự xây dựng không dựa trên các kiểu dữ liệu cơ bản được cung cấp từ ngôn ngữ lập trình",
+        "B": "B. Kiểu dữ liệu mà người lập trình phải tự xây dựng dựa trên các kiểu dữ liệu không cơ bản được cung cấp từ ngôn ngữ lập trình",
+        "C": "C. Kiểu dữ liệu mà người lập trình phải tự xây dựng dựa trên các kiểu dữ liệu cơ bản được cung cấp từ ngôn ngữ máy",
+        "D": "D. Kiểu dữ liệu mà người lập trình phải tự xây dựng dựa trên các kiểu dữ liệu cơ bản được cung cấp từ ngôn ngữ lập trình"
+    },
+    {
+        "quest": "Chỉ ra kiểu dữ liệu trừu tượng:\n",
+        "correct": "D",
+        "A": "A. float",
+        "B": "B. int",
+        "C": "C. char",
+        "D": "D. mảng 1 chiều"
+    },
+    {
+        "quest": "Cấu trúc dữ liệu là …\n",
+        "correct": "D",
+        "A": "A. cách lưu trữ dữ liệu trong bộ nhớ máy tính (ROM), sao cho nó có thể được sử dụng một cách hiệu quả",
+        "B": "B. cách lưu trữ dữ liệu trong bộ nhớ máy tính (HDD), sao cho nó có thể được sử dụng một cách hiệu quả",
+        "C": "C. cách lưu trữ dữ liệu trong bộ nhớ máy tính (USB), sao cho nó có thể được sử dụng một cách hiệu quả",
+        "D": "D. cách lưu trữ dữ liệu trong bộ nhớ máy tính (RAM), sao cho nó có thể được sử dụng một cách hiệu quả"
+    },
+    {
+        "quest": "Mối quan hệ giữa cấu trúc dữ liệu và giải thuật có thể minh hoạ bằng đẳng thức:\n",
+        "correct": "D",
+        "A": "A. Chương trình = Cấu trúc dữ liệu",
+        "B": "B. Giải thuật + Chương trình = Cấu trúc dữ liệu",
+        "C": "C. Cấu trúc dữ liệu + Chương trình = Giải thuật",
+        "D": "D. Cấu trúc dữ liệu + Giải thuật = Chương trình"
+    },
+    {
+        "quest": "Phát biểu sau đúng hay sai: Khi cấu trúc dữ liệu thay đổi thì giải thuật cũng thay đổi theo?\n \n",
+        "correct": "A",
+        "A": "A. Đúng",
+        "B": "B. Sai"
+    },
+    {
+        "quest": "Phát biểu sau đúng hay sai: khi nói tới dữ liệu thì cũng phải xem xét dữ liệu đó cần được thực hiện bằng giải thuật gì để đạt được kết quả mong muốn?\n",
+        "correct": "A",
+        "A": "A. Đungs",
+        "B": "B. Sai"
+    },
+    {
+        "quest": "Phát biểu sau đúng hay sai: Khi nói tới giải thuật phải xem xét nó sẽ tác động trên dữ liệu nào?\n \n",
+        "correct": "A",
+        "A": "A. Đúng",
+        "B": "B. Sai"
+    },
+    {
+        "quest": "Phát biểu sau đúng hay sai: Giải thuật thể hiện hành động của các bước để giải bài toán?\n",
+        "correct": "A",
+        "A": "A. Đúng",
+        "B": "B. Sai"
+    },
+    {
+        "quest": "Phát biểu sau đúng hay sai: Dữ liệu là đối tượng được xử lý , nó biểu diễn các thông tin cần thiết cho bài toán: dữ liệu vào, dữ liệu ra?\n",
+        "correct": "A",
+        "A": "A. Đúng",
+        "B": "B. Sai"
+    },
+    {
+        "quest": "Chỉ ra khái niệm có tính chất đệ quy?\n",
+        "correct": "A",
+        "A": "A. khái niệm tính giai thừa của n (n!)",
+        "B": "B. khái niệm hình ảnh",
+        "C": "C. khái niệm âm thanh"
+    },
+    {
+        "quest": "Phát biểu sau đúng hay sai: Trong lập trình, giải thuật đệ quy được sử dụng để xây dựng hàm đệ quy?\n",
+        "correct": "A",
+        "A": "A. Đúng ",
+        "B": "B. Sai"
+    },
+    {
+        "quest": "Phát biểu sau đúng hay sai: Hàm đệ quy là hàm mà trong thân hàm có lời gọi hàm đến chính nó?\n",
+        "correct": "A",
+        "A": "A. Đúng",
+        "B": "B. Sai"
+    },
+    {
+        "quest": "Phát biểu sau đúng hay sai: Chương trình đệ quy là những chương trình máy tính có sử dụng giải thuật đệ quy?\n",
+        "correct": "A",
+        "A": "A. Đúng",
+        "B": "B. Sai"
+    },
+    {
+        "quest": "Phát biểu sau đúng hay sai: Khi có lời gọi đệ quy, trạng thái hiện thời của chương trình (giá trị hiện thời của các biến, điểm ngắt thực hiện của chương trình) được lưu vào vùng bộ nhớ ngăn xếp?\n",
+        "correct": "A",
+        "A": "A. Đúng",
+        "B": "B. Sai"
+    },
+    {
+        "quest": "Phát biểu sau đúng hay sai: Khi hết lời gọi đệ quy, chương trình chưa kết thúc. Chương trình được tiếp tục thực hiện từ \"điểm ngắt\" với những giá trị của các biến ở thời điểm ngắt?\n",
+        "correct": "A",
+        "A": "A. Đúng",
+        "B": "B. Sai"
+    },
+    {
+        "quest": "Cho bài toán: cho trước n là một số tự nhiên, tính n!. Chỉ ra trường hợp suy biến\n",
+        "correct": "C",
+        "A": "A. với n = 0",
+        "B": "B. với n = 1",
+        "C": "C. với n =0 hoặc n = 1"
+    },
+    {
+        "quest": "Hãy chọn định nghĩa đúng nhất về danh sách kiểu hàng đợi (Queue)?\n",
+        "correct": "D",
+        "A": "A. Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung một phần tử được thực hiện ở một đầu, gọi là lối sau (rear) hay lối trước (front). Phép loại bỏ không thực hiện được",
+        "B": "B. Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung một phần tử hay loại bỏ được thực hiện ở một đầu danh sách gọi là đỉnh (Top)",
+        "C": "C. Hàng đợi là một danh sách tuyến tính trong đó phép bổ sung một phần tử và phép loại bỏ một phần tử được thực hiện ở tại một vị trí bất kì trong danh sách",
+        "D": "D. Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung phần tử ở một đầu, gọi là lối sau (rear) và phép loại bỏ phần tử được thực hiện ở đầu kia, gọi là lối trước (front)"
+    },
+    {
+        "quest": "Trong bốn kiểu ký hiệu sau đây, ký hiệu nào biểu thị cho danh sách kiểu hàng đợi?\n",
+        "correct": "A",
+        "A": "A. FIFO ",
+        "B": "B. LIFO",
+        "C": "C. FILO",
+        "D": "D. LOLO"
+    },
+    {
+        "quest": "Để thêm một đối tượng x bất kỳ vào Stack, ta dùng hàm nào sau đây?\n",
+        "correct": "C",
+        "A": "A. TOP(x)",
+        "B": "B. EMPTY(x)",
+        "C": "C. PUSH(x)",
+        "D": "D. POP(x)"
+    },
+    {
+        "quest": "Để loại bỏ một đối tượng ra khỏi Stack, ta dùng hàm nào sau đây?\n",
+        "correct": "B",
+        "A": "A. FULL(x)",
+        "B": "B. POP(x)",
+        "C": "C. EMPTY(x)",
+        "D": "D. PUSH(x)"
+    },
+    {
+        "quest": "Trong lưu trữ dữ liệu kiểu Queue (Q) dưới dạng mảng nối vòng, giả sử F là con trỏ trỏ tới lối trước của Q, R là con trỏ trỏ tới lối sau của Q. Điều kiện F=R=0 nghĩa là gì trong các phương án sau?\n",
+        "correct": "B",
+        "A": "A. Queue tràn",
+        "B": "B. Queue rỗng",
+        "C": "C. Kiểm tra chỉ số trước và chỉ số sau của Queue có bằng nhau hay không",
+        "D": "D. Đặt phần tử đầu và phần tử cuối của Queue bằng 0"
+    },
+    {
+        "quest": "Trong lưu trữ dữ liệu kiểu Queue (Q), giả sử F là con trỏ trỏ tới lối trước của Q, R là con trỏ trỏ tới lối sau của Q. Khi thêm một phần tử vào Queue, thì R và F thay đổi thế nào trong các phương án sau?\n",
+        "correct": "A",
+        "A": "A. F không thay đổi, R=R+1",
+        "B": "B. F=F+1, R không thay đổi",
+        "C": "C. F không thay đổi, R=R-1",
+        "D": "D. F=F-1, R không thay đổi"
+    },
+    {
+        "quest": "Trong lưu trữ dữ liệu kiểu Queue (Q), giả sử F là con trỏ trỏ tới lối trước của Q, R là con trỏ trỏ tới lối sau của Q. Khi loại bỏ một phần tử vào Queue, thì R và F thay đổi thế nào trong các phương án sau?\n",
+        "correct": "A",
+        "A": "A. F=F+1, R không thay đổi",
+        "B": "B. F không thay đổi, R=R+1",
+        "C": "C. F không thay đổi, R=R-1",
+        "D": "D. F=F-1, R không thay đổi"
+    },
+    {
+        "quest": "Cho cây nhị phân: A, B, C, D, E, F, G, H, I, J, K, L, M, N. Cây con trái của cây B bao gồm những phần tử nào trong các phương án sau?\n",
+        "correct": "D",
+        "A": "A. E, J, K",
+        "B": "B. C, D",
+        "C": "C. C, D, E",
+        "D": "D. D, H, I"
+    },
+    {
+        "quest": "Cho cây nhị phân: A, B, C, D, E, F, G, H, I, J, K, L, M, N. Cây con trái của cây C bao gồm những phần tử nào trong các phương án sau?\n",
+        "correct": "B",
+        "A": "A. E, F, G",
+        "B": "B. F, L, M",
+        "C": "C. E, F",
+        "D": "D. A, B"
+    },
+    {
+        "quest": "Cho cây nhị phân: A, B, C, D, E, F, G, H, I, J, K, L, M, N. Cây con phải của cây C bao gồm những phần tử nào trong các lựa chọn sau?\n",
+        "correct": "D",
+        "A": "A. D, E",
+        "B": "B. F, G, L",
+        "C": "C. D, E, F",
+        "D": "D. G, N"
+    },
+    {
+        "quest": "Cho cây nhị phân: A, B, C, D, E, F, G, H, I, J, K, L, M, N. Cây con phải của cây B bao gồm những phần tử nào trong các lựa chọn sau?\n",
+        "correct": "C",
+        "A": "A. E,K",
+        "B": "B. C, D",
+        "C": "C. E, J, K",
+        "D": "D. D, E, H"
+    },
+    {
+        "quest": "Hãy cho biết quy tắc đúng của phép duyệt cây theo thứ tự trước trong các phương án sau?\n \n",
+        "correct": "B",
+        "A": "A. Duyệt cây con trái theo thứ tự trước; Duyệt cây con phải theo thứ tự trước; Duyệt gốc",
+        "B": "B. Duyệt gốc; Duyệt cây con trái theo thứ tự trước; Duyệt cây con phải theo thứ tự trước",
+        "C": "C. Duyệt gốc, cây trái, cây phải đồng thời theo thứ tự trước",
+        "D": "D. Duyệt cây con trái theo thứ tự trước; Duyệt gốc; Duyệt cây con phải theo thứ tự trước"
+    },
+    {
+        "quest": "Hãy cho biết quy tắc đúng của phép duyệt cây theo thứ tự giữa trong các phương án sau?\n",
+        "correct": "D",
+        "A": "A. Duyệt gốc, cây trái, cây phải đồng thời theo thứ tự giữa",
+        "B": "B. Duyệt gốc; Duyệt cây con trái theo thứ tự giữa; Duyệt cây con phải theo thứ tự giữa",
+        "C": "C. Duyệt cây con trái theo thứ tự giữa; Duyệt cây con phải theo thứ tự giữa; Duyệt gốc",
+        "D": "D. Duyệt cây con trái theo thứ tự giữa; Duyệt gốc; Duyệt cây con phải theo thứ tự giữa"
+    },
+    {
+        "quest": "Hãy cho biết quy tắc đúng của phép duyệt cây theo thứ tự sau trong các phương án sau?\n",
+        "correct": "C",
+        "A": "A. Duyệt cây con trái theo thứ tự sau; Duyệt gốc; Duyệt cây con phải theo thứ tự sau",
+        "B": "B. Duyệt gốc, cây trái, cây phải đồng thời theo thứ tự sau",
+        "C": "C. Duyệt cây con trái theo thứ tự sau; Duyệt cây con phải theo thứ tự sau; Duyệt gốc",
+        "D": "D. Duyệt gốc; Duyệt cây con trái theo thứ tự sau; Duyệt cây con phải theo thứ tự sau"
+    },
+    {
+        "quest": "Yếu tố nào sau đây để xây dựng nên một chương trình hoàn chỉnh?\n",
+        "correct": "C",
+        "A": "A. Dữ liệu tốt, giải thuật đơn giản",
+        "B": "B. Giải thuật có thời gian thực hiện nhanh nhất",
+        "C": "C. Cấu trúc dữ liệu thích hợp, giải thuật xử lý hiệu quả",
+        "D": "D. Cấu trúc dữ liệu tốt"
+    },
+    {
+        "quest": "Theo các phương án dưới đây, kích thước lưu trữ kiểu số nguyên (Integer) bao nhiêu byte?\n",
+        "correct": "B",
+        "A": "A. 1 byte",
+        "B": "B. 2 byte",
+        "C": "C. 4 byte",
+        "D": "D. 6 byte"
+    },
+    {
+        "quest": "Hãy chọn Câu trả lời đúng nhất về giải thuật?\n",
+        "correct": "A",
+        "A": "A. Giải thuật hay còn gọi là thuật toán dùng để chỉ phương pháp hay cách thức giải quyết vấn đề( bao gồm một dãy các bước tính toán rõ ràng và chính xác)",
+        "B": "B. Giải thuật là nòng cốt của chương trình",
+        "C": "C. Giải thuật là một dãy hữu hạn các bước, tất cả các phép toán có mặt trong các bước của thuật toán phải đủ đơn giản",
+        "D": "D. Giải thuật cần có một hoặc nhiều dữ liệu ra (output), dữ liệu vào (input)"
+    },
+    {
+        "quest": "Hãy cho biết đâu là đặc trưng của thuật toán trong các phương án sau?\n",
+        "correct": "D",
+        "A": "A. Mỗi thuật toán có bộ dữ liệu vào, ra tương ứng",
+        "B": "B. Mỗi bước của thuật toán cần phải được mô tả một các chính xác",
+        "C": "C. Thuật toán phải dừng lại sau một số hữu hạn các bước cần thực hiện",
+        "D": "D. Tất cả các đặc trưng đã nêu"
+    },
+    {
+        "quest": "Dựa vào yếu tố nào sau đây để đánh giá thời gian thực hiện của giải thuật?\n",
+        "correct": "C",
+        "A": "A. Thời gian khi chạy chương trình cụ thể",
+        "B": "B. Tính xác định",
+        "C": "C. Độ phức tạp tính toán của giải thuật",
+        "D": "D. Tính dừng"
+    },
+    {
+        "quest": "Hãy cho biết phương án đúng của để sắp xếp theo thứ tự tăng dần của cấp thời gian thực hiện chương trình?\n",
+        "correct": "A",
+        "A": "A. O(1), O(logn), O(n), O(nlogn)",
+        "B": "B. O(1), O(nlogn), O(n), O(logn)",
+        "C": "C. O(logn), O(n), O(nlogn), O(1)",
+        "D": "D. O(nlogn), O(n), O(logn), O(1)"
+    },
+    {
+        "quest": "Hãy cho biết Câu trả lời đúng nhất về đặc điểm của giải thuật đệ quy?\n",
+        "correct": "D",
+        "A": "A. Trong thủ tục đệ quy có lời gọi đến chính thủ tục đó",
+        "B": "B. Sau mỗi lần có lời gọi đệ quy thì kích thước của bài toán được thu nhỏ hơn trước",
+        "C": "C. Có một trường hợp đặc biệt, trường hợp suy biến. Khi trường hợp này xảy ra thì bài toán còn lại sẽ được giải quyết theo một cách khác",
+        "D": "D. Tất cả các đáp án đều đúng"
+    },
+    {
+        "quest": "Hãy cho biết phương pháp nào sau đây để loại bỏ nút X trên cây nhị phân tìm kiếm, với X là một phần tử bất kỳ?\n",
+        "correct": "B",
+        "A": "A. Chỉ việc xoá X, vì X không liên quan đến phần tử nào khác",
+        "B": "B. Tìm nút chứa khoá lớn nhất trong cây con trái, đưa giá trị chứa trong đó sang nút X , rồi xoá X",
+        "C": "C. Không thể xoá X ra khỏi cây nhị phân tìm kiếm",
+        "D": "D. Tìm nút chứa khoá lớn nhất trong cây con phải, đưa giá trị chứa trong đó sang nút X , rồi xoá X"
+    },
+    {
+        "quest": "Với dữ liệu đầu vào (n) đủ nhỏ, ta nên sử dụng phương pháp sắp xếp nào sau đây?\n",
+        "correct": "C",
+        "A": "A. Sắp xếp nhanh(quick sort)",
+        "B": "B. Sắp xếp vun đống(Heap sort)",
+        "C": "C. Sắp xếp lựa chọn(selection sort)",
+        "D": "D. Sắp xếp trộn(Merge sort)"
+    },
+    {
+        "quest": "Trong các danh sách tuyến tính sau đây, danh sách nào sau đây có dạng ngăn xếp?\n",
+        "correct": "A",
+        "A": "A. Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp và phép loại bỏ một phần tử khỏi ngăn xếp luôn luôn thực hiện ở một đầu gọi là đỉnh",
+        "B": "B. Là một danh sách tuyến tính trong đó phép bổ sung sung một phần tử vào ngăn xếp được thực hiện ở một đầu, Và phép loại bỏ không thực hiện được",
+        "C": "C. Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp và phép loại bỏ một phần tử khỏi ngăn xếp luôn luôn thực hiện ở tại một vị trí bất kì trong danh sách",
+        "D": "D. Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp được thực hiện ở một đầu , và phép loại bỏ được thực hiện ở đầu ki"
+    },
+    {
+        "quest": "Danh sách tuyến tính dạng ngăn xếp làm việc theo nguyên tắc nào sau đây?\n",
+        "correct": "B",
+        "A": "A. LILO(last in last out)",
+        "B": "B. LIFO(last in first out)",
+        "C": "C. FIFO( first in first out)",
+        "D": "D. FOLO(fisrt out last out)"
+    },
+    {
+        "quest": "Với dữ liệu đầu vào (n) lớn, ta nên sử dụng phương pháp sắp xếp nào sau đây?\n",
+        "correct": "B",
+        "A": "A. Sắp xếp trộn (Merge sort) hoặc Sắp xếp đống(Heap sort)",
+        "B": "B. Sắp xếp đống(Heap sort) hoặc Sắp xếp nhanh(quick sort)",
+        "C": "C. Sắp xếp chọn(selection sort), sắp xếp chèn ( Insert sort)",
+        "D": "D. Sắp xếp nổi bọt ( bubble sort) hoặc Sắp xếp chọn(selection sort)"
+    },
+    {
+        "quest": "Hãy cho biết phát biểu nào đúng nhất về Giải thuật đệ quy?\n",
+        "correct": "C",
+        "A": "A. Trong giải thuật của nó có lời gọi tới một giải thuật khác đã biết kết quả",
+        "B": "B. Trong giải thuật của nó có lời gọi tới chính nó nhưng với phạm vi lớn hơn",
+        "C": "C. Trong giải thuật của nó có lời gọi tới chính nó nhưng với phạm vi nhỏ hơn",
+        "D": "D. Trong giải thuật của nó có lời gọi tới chính nó"
+    },
+    {
+        "quest": "Giả sử T1(n) và T2(n) là thời gian thực hiện của hai giai đoạn chương trình P1 và P2 mà T1(n) = O(f(n)); T2(n) = O(g(n)). Theo qui tắc tổng xác định độ phức tạp tính toán của giải thuật thì thời gian thực hiện đoạn P1 rồi đến P2 là phương án nào sau đây?\n",
+        "correct": "B",
+        "A": "A. T1(n) + T2(n) = O(Min(f(n),g(n)))",
+        "B": "B. T1(n) + T2(n) = O(max(f(n),g(n)))",
+        "C": "C. T1(n) + T2(n) = O((f(n) or g(n)))",
+        "D": "D. T1(n) + T2(n) = O((f(n)+g(n)))"
+    },
+    {
+        "quest": "Trong một chương trình có 3 bước thực hiện, mà thời gian thực hiện từng bước lần lượt là O(n^2), O(n^3) và O(nlogn). Cho biết thời gian thực hiện của chương trình là bao nhiêu trong các phương án sau?\n",
+        "correct": "A",
+        "A": "A. O(n^3)",
+        "B": "B. O(nlogn)",
+        "C": "C. O(n^2)",
+        "D": "D. O(n^2)+ O(n^3) + O(nlogn)"
+    },
+    {
+        "quest": "Nếu tương ứng với P1 và P2 là T1(n) = O(f(n)), T2(n) = O(g(n)) thì thời gian thực hiện P1 và P2 lồng nhau sẽ là bao nhiêu trong các phương án sau?\n",
+        "correct": "B",
+        "A": "A. T1(n)T2(n) = O(f(n)and g(n))",
+        "B": "B. T1(n)T2(n) = O(f(n).g(n))",
+        "C": "C. T1(n)T2(n) = O(f(n)+g(n))",
+        "D": "D. T1(n)T2(n) = O(f(n)/g(n))"
+    },
+    {
+        "quest": "Thời gian thực hiện các lệnh đơn (gán, đọc, viết) là bao nhiêu trong các phương án sau?\n",
+        "correct": "D",
+        "A": "A. O(logn)",
+        "B": "B. O(n)",
+        "C": "C. O(2)",
+        "D": "D. O(1)"
+    },
+    {
+        "quest": "Cho Stack gồm 5 phần tử {12, 5, 20, 23, 72}, trong đó 72 là phần tử ở đỉnh Stack. Để lấy ra phần tử thứ 4 trong Stack ta phải thực hiện theo phương án nào?\n",
+        "correct": "B",
+        "A": "A. POP(72), POP(23), POP(72)",
+        "B": "B. POP(72), POP(23), PUSH(72)",
+        "C": "C. POP(23), PUSH(23), POP(72)",
+        "D": "D. POP(23), PUSH(72), POP(72)"
+    },
+    {
+        "quest": "Trong các giải thuật sắp xếp, giải thuật nào sau đây áp dụng phương pháp Chia để trị?\n",
+        "correct": "B",
+        "A": "A. Quick sort, Heap sort",
+        "B": "B. Quick sort, Merge sort",
+        "C": "C. Quick sort, Bubble sort",
+        "D": "D. Quick sort, Insert sort"
+    },
+    {
+        "quest": "Hãy cho biết ý tưởng nào sau đây nói về phương pháp sắp xếp chọn tăng dần (select sort)?\n",
+        "correct": "C",
+        "A": "A. Phân đoạn dãy thành nhiều dãy con và lần lượt trộn hai dãy con thành dãy lớn hơn, cho đến khi thu được dãy ban đầu đã được sắp xếp",
+        "B": "B. Lần lượt lấy phần tử của danh sách chèn vị trí thích hợp của nó trong dãy",
+        "C": "C. Chọn phần tử bé nhất xếp vào vị trí thứ nhất bằng cách đổi chổ phần tử bé nhất với phần tử thứ nhất; Tương tự đối với phần tử nhỏ thứ hai cho đến phần tử cuối cùng",
+        "D": "D. Bắt đầu từ cuối dãy đến đầu dãy, ta lần lượt so sánh hai phần tử kế tiếp nhau, nếu phần tử nào bé hơn được cho lên vị trí trên"
+    },
+    {
+        "quest": "Hãy cho biết ý tưởng nào sau đây nói về phương pháp sắp xếp nổi bọt (bubble sort)?\n",
+        "correct": "B",
+        "A": "A. Phân đoạn dãy thành nhiều dãy con và lần lượt trộn hai dãy con thành dãy lớn hơn, cho đến khi thu được dãy ban đầu đã được sắp xếp",
+        "B": "B. Bắt đầu từ cuối dãy đến đầu dãy, ta lần lượt so sánh hai phần tử kế tiếp nhau, nếu phần tử nào nhỏ hơn được đứng vị trí trên",
+        "C": "C. Lần lượt lấy phần tử của danh sách chèn vị trí thích hợp của nó trong dãy bằng cách đẩy các phần tử lớn hơn xuống",
+        "D": "D. Chọn phần tử bé nhất xếp vào vị trí thứ nhất bằng cách đổi chổ phần tử bé nhất với phần tử thứ nhất; Tương tự đối với phần tử nhỏ thứ hai cho đến phần tử cuối cùng"
+    },
+    {
+        "quest": "Hãy cho biết ý tưởng nào sau đây nói về phương pháp sắp xếp chèn (insertion sort)?\n",
+        "correct": "B",
+        "A": "A. Phân đoạn dãy thành nhiều dãy con và lần lượt trộn hai dãy con thành dãy lớn hơn, cho đến khi thu được dãy ban đầu đã được sắp xếp",
+        "B": "B. Lần lượt lấy phần tử của danh sách chèn vị trí thích hợp của nó trong dãy bằng cách đẩy các phần tử lớn hơn xuống",
+        "C": "C. Chọn phần tử bé nhất xếp vào vị trí thứ nhất bằng cách đổi chổ phần tử bé nhất với phần tử thứ nhất; Tương tự đối với phần tử nhỏ thứ hai cho đến phần tử cuối cùng",
+        "D": "D. Bắt đầu từ cuối dãy đến đầu dãy, ta lần lượt so sánh hai phần tử kế tiếp nhau, nếu phần tử nào nhỏ hơn được đứng vị trí trên"
+    },
+    {
+        "quest": "Hãy cho biết ý tưởng nào sau đây nói về phương pháp sắp xếp nhanh (Quick sort)?\n",
+        "correct": "D",
+        "A": "A. Chọn phần tử bé nhất xếp vào vị trí thứ nhất bằng cách đổi chổ phần tử bé nhất với phần tử thứ nhất; Tương tự đối với phần tử nhỏ thứ hai cho đến phần tử cuối cùng",
+        "B": "B. Bắt đầu từ cuối dãy đến đầu dãy, ta lần lượt so sánh hai phần tử kế tiếp nhau, nếu phần tử nào nhỏ hơn được đứng vị trí trên",
+        "C": "C. Phân đoạn dãy thành nhiều dãy con và lần lượt trộn hai dãy con thành dãy lớn hơn, cho đến khi thu được dãy ban đầu đã được sắp xếp",
+        "D": "D. Lần lượt chia dãy phần tử thành hai dãy con bởi một phần tử khoá (dãy con trước khoá gồm các phần tử nhỏ hơn khoá và dãy còn lại gồm các phần tử lớn hơn khoá)"
+    },
+    {
+        "quest": "Phương pháp nào sau đây chính là phương pháp sắp xếp nhanh (Quick sort)?\n",
+        "correct": "D",
+        "A": "A. Phương phap trộn",
+        "B": "B. Phương pháp vun đống",
+        "C": "C. Phương pháp chèn",
+        "D": "D. Phương pháp phân đoạn"
+    },
+    {
+        "quest": "Hãy cho biết ý tưởng nào sau đây nói về tưởng phương pháp sắp xếp Trộn (Merge sort)?\n",
+        "correct": "D",
+        "A": "A. Lần lượt chia dãy phần tử thành hai dãy con bởi một phần tử khoá (dãy con trước khoá gồm các phần tử nhỏ hơn khoá và dãy còn lại gồm các phần tử lớn hơn khoá)",
+        "B": "B. Bắt đầu từ cuối dãy đến đầu dãy, ta lần lượt so sánh hai phần tử kế tiếp nhau, nếu phần tử nào nhỏ hơn được đứng vị trí trên",
+        "C": "C. Chọn phần tử bé nhất xếp vào vị trí thứ nhất bằng cách đổi chổ phần tử bé nhất với phần tử thứ nhất; Tương tự đối với phần tử nhỏ thứ hai cho đến phần tử cuối cùng",
+        "D": "D. Phân đoạn dãy thành nhiều dãy con và lần lượt trộn hai dãy con thành dãy lớn hơn, cho đến khi thu được dãy ban đầu đã được sắp xếp"
+    },
+    {
+        "quest": "Hãy cho biết ý tưởng nào sau đây nói về phương pháp sắp xếp vun đống (Heap sort)?\n",
+        "correct": "D",
+        "A": "A. Tạo đống cho cây nhị phân (cây nhị phân đã được sắp xếp giảm dần)",
+        "B": "B. Lần lượt chia dãy phần tử thành hai dãy con bởi một phần tử khoá (dãy con trước khoá gồm các phần tử nhỏ hơn khoá và dãy còn lại gồm các phần tử lớn hơn khoá)",
+        "C": "C. Bắt đầu từ cuối dãy đến đầu dãy, ta lần lượt so sánh hai phần tử kế tiếp nhau, nếu phần tử nào nhỏ hơn được đứng vị trí trên",
+        "D": "D. Lần lượt tạo đống cho cây nhị phân (phần tử gốc có giá trị lớn nhất) và loại phần tử gốc ra khỏi cây đưa vào dãy sắp xếp"
+    },
+    {
+        "quest": "Trong giải thuật sắp xếp vun đống, ta có 4 thủ tục con (Insert - thêm 1 phần tử vào cây; Downheap - vun đống lại sau khi loại một phần tử khỏi Heap, Upheap- vun đống sau khi thêm một phần tử vào cây; Remove - loại 1 phần tử khỏi cây nhị phân). Để sắp xếp các phần tử trong dãy theo phương pháp vun đống, ta thực hiện 4 thủ tục trên theo thứ tự như thế nào sau đây?\n",
+        "correct": "D",
+        "A": "A. Remove – Downheap – Insert – Upheap",
+        "B": "B. Insert – Upheap – Downheap – Remove",
+        "C": "C. Upheap – Downheap – Remove – Insert",
+        "D": "D. Insert – Upheap – Remove – Downheap"
+    },
+    {
+        "quest": "Hãy cho biết tư tưởng nào sau đây nói về của giải thuật tìm kiếm nhị phân?\n",
+        "correct": "D",
+        "A": "A. Lần lượt chia dãy thành hai dãy con dựa vào phần tử khoá, sau đó thực hiện việc tìm kiếm trên hai đoạn đã chi",
+        "B": "B. So sánh X lần lượt với các phần tử thứ nhất, thứ hai,... của dãy cho đến khi gặp phần tử có khoá cần tìm",
+        "C": "C. Tìm kiếm dựa vào cây nhị tìm kiếm",
+        "D": "D. Tại mỗi bước tiến hành so sánh X với phần tử ở giữa của dãy, dựa vào bước so sánh này quyết định giới hạn dãy tìm kiếm nằm ở nửa trên, hay nửa dưới của dãy hiện hành"
+    },
+    {
+        "quest": "Hãy cho biết tư tưởng nào sau đây nói về của giải thuật tìm kiếm tuần tự?\n",
+        "correct": "A",
+        "A": "A. So sánh X lần lượt với các phần tử thứ nhất, thứ hai,... của dãy cho đến khi gặp phần tử có khoá cần tìm",
+        "B": "B. Tìm kiếm dựa vào cây nhị tìm kiếm: Nếu giá trị cần tìm nhỏ hơn gốc thì thực hiện tìm kiếm trên cây con trái, ngược lại ta việc tìm kiếm được thực hiện trên cây con phải",
+        "C": "C. Lần lượt chia dãy thành hai dãy con dựa vào phần tử khoá, sau đó thực hiện việc tìm kiếm trên hai đoạn đã chi",
+        "D": "D. Tại mỗi bước tiến hành so sánh X với phần tử ở giữa của dãy, dựa vào bước so sánh này quyết định giới hạn dãy tìm kiếm nằm ở nửa trên, hay nửa dưới của dãy hiện hành"
+    },
+    {
+        "quest": "Hãy cho biết tư tưởng nào sau đây nói về của giải thuật tìm kiếm trên cây nhị phân tìm kiếm?\n",
+        "correct": "B",
+        "A": "A. Lần lượt chia dãy thành hai dãy con dựa vào phần tử khoá, sau đó thực hiện việc tìm kiếm trên hai đoạn đã chi",
+        "B": "B. So sánh X lần lượt với các phần tử thứ nhất, thứ hai,... của dãy cho đến khi gặp phần tử có khoá cần tìm",
+        "C": "C. Tìm kiếm dựa vào cây nhị tìm kiếm: Nếu giá trị cần tìm nhỏ hơn gốc thì thực hiện tìm kiếm trên cây con trái, ngược lại ta việc tìm kiếm được thực hiện trên cây con phải",
+        "D": "D. Tại mỗi bước tiến hành so sánh X với phần tử ở giữa của dãy, dựa vào bước so sánh này quyết định giới hạn dãy tìm kiếm nằm ở nửa trên, hay nửa dưới của dãy hiện hành"
+    },
+    {
+        "quest": "Hãy cho biết tính chất nào sau đây là của cây nhị phân tìm kiếm?\n",
+        "correct": "D",
+        "A": "A. Cây nhị phân mà mỗi nút trong cây đều thoả tính chất: giá trị của nút cha lớn hơn giá trị của hai nút con",
+        "B": "B. Là cây nhị phân đầy đủ",
+        "C": "C. Cây nhị phân thoả tính chất heap",
+        "D": "D. Cây nhị phân mà mỗi nút trong cây đều thoả tính chất: giá trị của nút cha nhỏ hơn mọi nút trên cây con trái và lớn hơn mọi nút trên cây con phải của nó"
+    },
+    {
+        "quest": "Cho cây nhị phân: A B C D E F. Cho biết thứ tự các phần tử được duyệt nào sau đây là đúng khi sử dụng phép duyệt cây theo thứ tự trước?\n",
+        "correct": "C",
+        "A": "A. A, B, D, C, F, E",
+        "B": "B. A, B, C, D, E, F",
+        "C": "C. A, B, D, E, C, F",
+        "D": "D. D, B, A, C, E, F"
+    },
+    {
+        "quest": "Cho cây nhị phân: A B C D E F. Cho biết thứ tự các phần tử được duyệt nào sau đây là đúng khi sử dụng phép duyệt cây theo thứ tự giữa?\n",
+        "correct": "D",
+        "A": "A. D, B, E, C, F, A",
+        "B": "B. A, B, D, C, E, F",
+        "C": "C. D, B, E, F, C, A",
+        "D": "D. D, B, E, A, C, F"
+    },
+    {
+        "quest": "Cho cây nhị phân: A B C D E F. Cho biết thứ tự các phần tử được duyệt nào sau đây là đúng khi sử dụng phép duyệt cây theo thứ tự sau?\n",
+        "correct": "D",
+        "A": "A. A, B, D, C, E, F",
+        "B": "B. D, B, E, F, A, C",
+        "C": "C. D, B, A, E, C, F",
+        "D": "D. D, E, B, F, C, A"
+    },
+    {
+        "quest": "Khi lưu trữ cây nhị phân dưới dạng mảng, phần tử ở vị trí số 9 đóng vai trò gì trong các phương án sau?\n",
+        "correct": "A",
+        "A": "A. Là nút con phải của nút có vị trí là 4",
+        "B": "B. Là nút con trái của nút có vị trí là 5",
+        "C": "C. Là nút con trái của nút có vị trí là 4",
+        "D": "D. Là nút con phải của nút có vị trí là 5"
+    },
+    {
+        "quest": "Khi lưu trữ cây nhị phân dưới dạng mảng, nếu vị trí của nút cha là i thì vị trí của nút con trái là gì trong các phương án sau?\n",
+        "correct": "C",
+        "A": "A. 2*i + 1",
+        "B": "B. i-1",
+        "C": "C. 2*i",
+        "D": "D. i+1"
+    },
+    {
+        "quest": "Khi lưu trữ cây nhị phân dưới dạng mảng, nếu vị trí của nút cha trong mảng là i thì vị trí của nút con phải là gì trong các phương án sau?\n",
+        "correct": "A",
+        "A": "A. 2*i + 1",
+        "B": "B. i+1",
+        "C": "C. i-1",
+        "D": "D. 2*i"
+    },
+    {
+        "quest": "Trong biểu diễn dữ liệu dưới dạng cây, Khái niệm nào sau đây là cấp của cây?\n",
+        "correct": "C",
+        "A": "A. Là tổng số nút trên cây",
+        "B": "B. Là cấp cao nhất của nút gố",
+        "C": "C. Là cấp cao nhất của một nút trên cây",
+        "D": "D. Là cấp cao nhất của nút lá"
+    },
+    {
+        "quest": "Trong biểu diễn dữ liệu dưới dạng cây, nút có cấp bằng 0 gọi là nút gì trong các phương án sau?\n",
+        "correct": "A",
+        "A": "A. Là nút lá",
+        "B": "B. Là phần tử cuối cùng trong cây",
+        "C": "C. Là nút gố",
+        "D": "D. Là phần tử đầu cùng trong cây"
+    },
+    {
+        "quest": "Khi lưu trữ cây nhị phân dưới dạng mảng, nếu vị trí của nút cha trong mảng là 3 thì vị trí tương ứng của nút con phải sẽ bao nhiêu trong các phương án sau?\n",
+        "correct": "D",
+        "A": "A. 2",
+        "B": "B. 4",
+        "C": "C. 6",
+        "D": "D. 7"
+    },
+    {
+        "quest": "Giải thuật đệ quy là:\n",
+        "correct": "C",
+        "A": "A. Trong giải thuật của nó có lời gọi tới chính nó",
+        "B": "B. Trong giải thuật của nó có lời gọi tới chính nó nhưng với phạm vi lớn hơn",
+        "C": "C. Trong giải thuật của nó có lời gọi tới chính nó nhưng với phạm vi nhỏ hơn",
+        "D": "D. Trong giải thuật của nó có lời gọi tới một giải thuật khác đã biết kết quả"
+    },
+    {
+        "quest": "Đặc điểm của giải thuật đệ quy:\n",
+        "correct": "D",
+        "A": "A. Có một trường hợp đặc biệt, trường hợp suy biến Khi trường hợp này xảy ra thì bài toán còn lại sẽ được giải quyết theo một cách khác",
+        "B": "B. Trong thủ tục đệ quy có lời gọi đến chính thủ tục đó",
+        "C": "C. Sau mỗi lần có lời gọi đệ quy thì kích thước của bài toán được thu nhỏ hơn trước",
+        "D": "D. Tất cả đều đúng"
+    },
+    {
+        "quest": "Danh sách tuyến tính là:\n",
+        "correct": "C",
+        "A": "A. Danh sách dạng được lưu dưới dạng mảng",
+        "B": "B. Danh sách tuyến tính là một danh sách rỗng",
+        "C": "C. Danh sách mà quan hệ lân cận giữa các phần tử được xác định",
+        "D": "D. Danh sách tuyến tính là một danh sách có dạng (a1, a2, ..., an)"
+    },
+    {
+        "quest": "Ưu điểm của việc cài đặt danh sách bằng mảng:\n",
+        "correct": "C",
+        "A": "A. Có thể thay đổi số lượng phần tử theo ý muốn của người dùng",
+        "B": "B. Có thể bổ sung hoặc xóa một phần tử bất kỳ trong mảng",
+        "C": "C. Việc truy nhập vào phần tử của mảng được thực hiện trực tiếp dựa vào địa chỉ tính được (chỉ số), nên tốc độ nhanh và đồng đều đối với mọi phần tử",
+        "D": "D. Tất cả các ý trên đều đúng"
+    },
+    {
+        "quest": "Danh sách tuyến tính dạng ngăn xếp là:\n",
+        "correct": "D",
+        "A": "A. Là một danh sách tuyến tính trong đó phép bổ sung sung một phần tử vào ngăn xếp được thực hiện ở một đầu, Và phép loại bỏ không thực hiện được",
+        "B": "B. Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp được thực hiện ở một đầu , và phép loại bỏ được thực hiện ở đầu kia",
+        "C": "C. Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp và phép loại bỏ một phần tử khỏi ngăn xếp luôn luôn thực hiện ở tại một vị trí bất kì trong danh sách",
+        "D": "D. Là một danh sách tuyến tính trong đó phép bổ sung một phần tử vào ngăn xếp và phép loại bỏ một phần tử khỏi ngăn xếp luôn luôn thực hiện ở một đầu gọi là đỉnh"
+    },
+    {
+        "quest": "Định nghĩa danh sách tuyến tính Hàng đợi (Queue):\n",
+        "correct": "C",
+        "A": "A. Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung một phần tử được thực hiện ở một đầu, gọi là lối sau (rear) hay lối trước (front). Phép loại bỏ không thực hiện được",
+        "B": "B. Là một danh sách tuyến tính trong đó phép bổ sung một phần tử và phép loại bỏ một phần tử được thực hiện ở tại một vị trí bất kì trong danh sách",
+        "C": "C. Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung phần tử ở một đầu, gọi là lối sau (rear) và phép loại bỏ phần tử được thực hiện ở đầu kia, gọi là lối trước (front)",
+        "D": "D. Hàng đợi là kiểu danh sách tuyến tính trong đó, phép bổ sung một phần tử hay loại bỏ được thực hiện ở một đầu danh sách gọi là đỉnh (Top)"
+    },
+    {
+        "quest": "Hàng đợi còn được gọi là danh sách kiểu:\n",
+        "correct": "B",
+        "A": "A. LOLO",
+        "B": "B. FIFO",
+        "C": "C. FILO",
+        "D": "D. LIFO"
+    },
+    {
+        "quest": "Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ hai là:\n",
+        "correct": "B",
+        "A": "A. {0 1 2 6 5 7 9 3 8 4}",
+        "B": "B. {0 1 3 6 5 7 9 2 8 4}",
+        "C": "C. {0 1 2 3 4 5 6 7 8 9}",
+        "D": "D. {0 1 2 6 5 7 9 3 4 8}"
+    },
+    {
+        "quest": "Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ ba là:\n",
+        "correct": "A",
+        "A": "A. {0 1 2 6 5 7 9 3 8 4}",
+        "B": "B. {0 1 2 6 5 7 9 3 4 8}",
+        "C": "C. {0 1 2 3 6 5 7 9 8 4}",
+        "D": "D. {0 1 2 3 4 5 6 7 8 9}"
+    },
+    {
+        "quest": "Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ tư là:\n",
+        "correct": "D",
+        "A": "A. {0 1 2 3 6 5 7 9 8 4}",
+        "B": "B. {0 1 2 3 4 5 6 7 8 9}",
+        "C": "C. {0 1 2 3 5 7 9 4 8 6}",
+        "D": "D. {0 1 2 3 5 7 9 6 8 4}"
+    },
+    {
+        "quest": "Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ năm là:\n",
+        "correct": "D",
+        "A": "A. {0 1 2 3 6 5 7 9 8 4}",
+        "B": "B. {0 1 2 3 5 7 9 4 8 6}",
+        "C": "C. {0 1 2 3 4 5 6 7 8 9}",
+        "D": "D. {0 1 2 3 4 7 9 6 8 5}"
+    },
+    {
+        "quest": "Cho dãy số {6 1 3 0 5 7 9 2 8 4}. áp dụng phương pháp sắp xếp lựa chọn (Select sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {0 1 3 6 5 7 9 2 8 4}. Dãy số thu được sau lần lặp thứ sáu là:\n",
+        "correct": "D",
+        "A": "A. {0 1 2 3 4 7 9 6 8 5}",
+        "B": "B. {0 1 2 3 4 5 6 9 8 7}",
+        "C": "C. {0 1 2 3 4 5 6 7 8 9}",
+        "D": "D. {0 1 2 3 4 5 9 6 8 7}"
+    },
+    {
+        "quest": "Cho dãy số {3 1 6 0 5 4 8 2 9 7}. áp dụng phương pháp sắp xếp nhanh (Quick sort) sau lần lặp đầu tiên của giải thuật ta có kết quả: {(0 1 2) 3 (5 4 8 6 9 7)}. Dãy số thu được sau lần lặp thứ bốn là:\n",
+        "correct": "B",
+        "A": "A. {(0) 1 (2 3) 4 (5 6) 7 (8 9)}",
+        "B": "B. {0 1 2 3 (5 4 8 6 9 7)}",
+        "C": "C. {(3) 1 (6 0) 5 (4 8) 2 (9 7)}",
+        "D": "D. {0 1 (2) 3 (5 4) 8 (6 9 7)}"
+    },
+    {
+        "quest": "Cho dãy số sau: 40 25 75 15 65 55 90 30 95 85. Áp dụng phương pháp sắp xếp lựa chọn, sau lượt 1 dãy sẽ được sắp xếp lại như thế nào?\n",
+        "correct": "C",
+        "A": "A. 15 25 40 75 30 55 65 90 85 95",
+        "B": "B. 40 25 75 15 30 65 55 90 85 95",
+        "C": "C. 15 25 75 40 65 55 90 30 95 85",
+        "D": "D. 15 40 25 30 75 65 55 85 90 95"
+    },
+    {
+        "quest": "Cho dãy số sau: 40 25 75 15 65 55 90 30 95 85. Áp dụng phương pháp sắp xếp lựa chọn, sau lượt 2 dãy sẽ được sắp xếp lại như thế nào?\n",
+        "correct": "C",
+        "A": "A. 15 25 75 30 40 65 55 90 85 95",
+        "B": "B. 15 40 25 75 30 55 65 90 85 95",
+        "C": "C. 15 25 75 40 65 55 90 30 95 85",
+        "D": "D. 15 40 25 30 75 65 55 85 90 95"
+    },
+    {
+        "quest": "Cho dãy số sau: 40 25 75 15 65 55 90 30 95 85. Áp dụng phương pháp sắp xếp hòa nhập (Merge_Sort) trực tiếp, sau lượt 1 dãy sẽ được sắp xếp lại như thế nào?\n",
+        "correct": "D",
+        "A": "A. [15 40] [30 25] [55 65] [75 85] [90 95]",
+        "B": "B. [40 25] [55 15] [30 65] [75 90] [85 95]",
+        "C": "C. [15 25] [40 75] [30 55] [65 90] [85 95]",
+        "D": "D. [25 40] [15 75] [55 65] [30 90] [85 95]"
+    },
+    {
+        "quest": "Cho dãy số sau: 14 32 10 43 57 87 55 36 97 11. Áp dụng phương pháp tìm kiếm tuần tự, sau bao nhiều lần thực hiện phép so sánh ta sẽ tìm thấy số 43?\n",
+        "correct": "C",
+        "A": "A. 2 lần",
+        "B": "B. 3 lần",
+        "C": "C. 4 lần",
+        "D": "D. 5 lần`"
+    },
+    {
+        "quest": "Cho dãy số sau: 10 11 14 32 36 43 55 57 87 97 . Áp dụng phương pháp tìm kiếm nhị phân, sau bao nhiêu lần phân đoạn ta sẽ tìm thấy số 43?\n",
+        "correct": "B",
+        "A": "A. 2 lần",
+        "B": "B. 3 lần",
+        "C": "C. 4 lần",
+        "D": "D. 5 lần"
+    },
+    {
+        "quest": "Cho dãy số sau: 10 11 14 32 36 43 55 57 87 97. Áp dụng phương pháp tìm kiếm nhị phân, để tìm kiếm số 10, lần phân đoạn thứ nhất của dãy sẽ là:\n \n",
+        "correct": "B",
+        "A": "A. [14 32 10 43 57]",
+        "B": "B. [10 11 14 32 36]",
+        "C": "C. [87 55 36 97 11]",
+        "D": "D. [55 36 97 11]"
+    },
+    {
+        "quest": "Cho dãy số sau: 10 11 14 32 36 43 55 57 87 97. Áp dụng phương pháp tìm kiếm nhị phân, để tìm kiếm số 97, lần phân đoạn thứ hai của dãy sẽ là:\n",
+        "correct": "D",
+        "A": "A. [36 97]",
+        "B": "B. [36 11]",
+        "C": "C. [36 97 11]",
+        "D": "D. [87 97]"
+    },
+    {
+        "quest": "Tính chất nào sau đây là tính chất của cây nhị phân tìm kiếm:\n",
+        "correct": "A",
+        "A": "A. Mọi khóa thuộc cây con trái nút đó đều nhỏ hơn khóa ứng với nút đó",
+        "B": "B. Mọi khóa thuộc cây con trái nút đó đều lớn hơn khóa ứng với nút đó",
+        "C": "C. Mọi khóa thuộc cây con trái nút đó đều lớn hơn khóa cây con phải nút đó",
+        "D": "D. Đáp án A và C"
+    },
+    {
+        "quest": "Các thuộc tính của một kiểu dữ liệu?\n",
+        "correct": "D",
+        "A": "A. Tên kiểu dữ liệu",
+        "B": "B. Tập các toán tử tác động lên kiểu dữ liệu",
+        "C": "C. Kích thước lưu trữ",
+        "D": "D. Tất cả các thuộc tính đưa ra"
+    },
+    {
+        "quest": "Miền giá trị của Kiểu số nguyên là:\n",
+        "correct": "C",
+        "A": "A. -32767 .. 32768",
+        "B": "B. 0..32768",
+        "C": "C. -32768 .. 32767",
+        "D": "D. 0..32767"
+    },
+    {
+        "quest": ": Tập các toán tử kiểu số nguyên là:\n",
+        "correct": "B",
+        "A": "A. +, -, , /, %, các phép so sánh, div ,mod",
+        "B": "B. +, -, , /, %, các phép so sánh",
+        "C": "C. +, -, , /, %",
+        "D": "D. +, -, , /, % ,true,false"
+    },
+    {
+        "quest": "Chọn câu trả lời đúng nhất về thuật toán?\n",
+        "correct": "C",
+        "A": "A. Thuật toán là một dãy hữu hạn các bước, tất cả các phép toán có mặt trong các bước của thuật toán phải đủ đơn giản",
+        "B": "B. Thuật toán là nòng cốt của chương trình",
+        "C": "C. Thuật toán là một dãy hữu hạn các bước, mỗi bước mô tả chính xác các phép toán hoặc hành động cần thực hiện để giải quyết vấn đề đặt ra",
+        "D": "D. Thuật toán cần có một hoặc nhiều dữ liệu ra (output) ,dữ liệu vào (input)"
+    },
+    {
+        "quest": "Đặc trưng nào của thuật toán thể hiện: Tất cả các phép toán có mặt trong các bước của thuật toán phải đủ đơn giản:\n",
+        "correct": "B",
+        "A": "A. Tính xác định",
+        "B": "B. Tính khả thi",
+        "C": "C. Tính dừng"
+    },
+    {
+        "quest": "Để viết chương trình chỉ để sử dụng một số ít lần và cái giá của thời gian viết chương trình vượt xa cái giá của chạy chương trình thì ta chọn thuật toán:\n",
+        "correct": "B",
+        "A": "A. Thuật toán sử dụng tiếp kiện nhất nguồn tài nguyên của máy tính, và đặc biệt, chạy nhanh nhất có thể được",
+        "B": "B. Thuật toán đơn giản, dễ hiểu, dễ cài đặt (dễ viết chương trình)",
+        "C": "C. Cả hai tiêu chí nêu ra"
+    },
+    {
+        "quest": "Khi viết các chương trình (thủ tục hoặc hàm) để sử dụng nhiều lần, cho nhiều người sử dụng ta chọn thuật toán:\n",
+        "correct": "A",
+        "A": "A. Thuật toán sử dụng tiếp kiện nhất nguồn tài nguyên của máy tính, và đặc biệt, chạy nhanh nhất có thể được",
+        "B": "B. Thuật toán đơn giản, dễ hiểu, dễ cài đặt (dễ viết chương trình)",
+        "C": "C. Cả hai tiêu chí nêu ra"
+    },
+    {
+        "quest": "Cài đặt danh sách bằng con trỏ có nghĩa là:\n",
+        "correct": "A",
+        "A": "A. Dùng con trỏ để liên kết các phần tử của danh sách theo phương thức ai chỉ đến ai+1. Để một phần tử có thể chỉ đến một phần tử khác ta xem mỗi ô là một Record gồm có 2 trường : Trường Elements để giữ nội dung của phần tử trong danh sách. Trường Next là một con trỏ giữ địa chỉ của ô kế tiếp",
+        "B": "B. Dùng một mảng (array) để lưu trữ liên tiếp các phần tử của danh sách bắt đầu từ vị trí đầu tiên của mảng. Khai báo bản ghi gồm 2 trường:Trường Elements để giữ nội dung của phần tử trong danh sách. Trường Next là một con trỏ giữ địa chỉ của ô kế tiếp",
+        "C": "C. Dùng con trỏ quản lí các phần tử của mảng theo phương thức bất kì. Để một phần tử có thể chỉ đến một phần tử khác ta xem mỗi ô là một Record gồm có 2 trường : Trường Elements để giữ nội dung của phần tử trong danh sách. Trường Next là một con trỏ giữ địa chỉ của ô kế tiếp.",
+        "D": "D. Tất cả đều đúng"
+    },
+    {
+        "quest": "Đối với biến con trỏ Hàm MaxAvail: Longint: có nghĩa là gì?\n",
+        "correct": "C",
+        "A": "A. Cho biết số bytes được cấp phát / thu hồi bởi biến",
+        "B": "B. Hàm cho biết tổng số bytes còn lại trên Heap",
+        "C": "C. Hàm cho biết vùng nhớ lớn nhất còn trống trong Heap",
+        "D": "D. Hàm cho biết vùng nhớ lớn nhất được cấp phát"
+    },
+    {
+        "quest": "Đối với biến con trỏ Hàm MemAvail: Longint : có nghĩa là gì?\n",
+        "correct": "A",
+        "A": "A. Cho biết số bytes được cấp phát / thu hồi bởi biến",
+        "B": "B. Hàm cho biết vùng nhớ lớn nhất được cấp phát",
+        "C": "C. Hàm cho biết tổng số bytes còn lại trên Heap",
+        "D": "D. Hàm cho biết vùng nhớ lớn nhất còn trống trong Heap"
+    },
+    {
+        "quest": "Đối với biến con trỏ Hàm SizeOf (Biến ): Longint: có nghĩa là gì?\n",
+        "correct": "D",
+        "A": "A. Cho biết số bytes được cấp phát / thu hồi bởi biến",
+        "B": "B. Hàm cho biết vùng nhớ lớn nhất được cấp phát",
+        "C": "C. Hàm cho biết vùng nhớ lớn nhất còn trống trong Heap.",
+        "D": "D. Hàm cho biết tổng số bytes còn lại trên Heap"
+    },
+    {
+        "quest": "Đối với biến con trỏ hàm Add (x): Pointer có chức năng gì?\n",
+        "correct": "D",
+        "A": "A. Cho biết địa chỉ segment của biến x",
+        "B": "B. Cho biết địa chỉ seg: Ofs",
+        "C": "C. Cho biết địa chỉ Offset của biến x",
+        "D": "D. Cho biết địa chỉ tổng quát của biến x"
+    },
+    {
+        "quest": "Đối với biến con trỏ hàm Seg (x): Word có chức năng gì?\n.\n",
+        "correct": "A",
+        "A": "A. Cho biết địa chỉ segment của biến x",
+        "B": "B. Cho biết địa chỉ Offset của biến x",
+        "C": "C. Cho biết địa chỉ seg: Ofs",
+        "D": "D. Cho biết địa chỉ tổng quát của biến x"
+    },
+    {
+        "quest": "Đối với biến con trỏ hàm Ofs (x): Word có chức năng gì?\n",
+        "correct": "D",
+        "A": "A. Cho biết địa chỉ seg: Ofs",
+        "B": "B. Cho biết địa chỉ segment của biến x",
+        "C": "C. Cho biết địa chỉ tổng quát của biến x",
+        "D": "D. Cho biết địa chỉ Offset của biến x"
+    },
+    {
+        "quest": "Thế nào là sắp xếp trong?\n",
+        "correct": "D",
+        "A": "A. Sắp xếp trong là sắp xếp dữ liệu không cần đến bộ nhớ trong máy tính, mà chỉ cần các đối tượng được lưu trũ bằng bộ nhớ ngoài",
+        "B": "B. Sắp xếp trong là sự sắp xếp được sử dụng khi số lượng đối tượng được sắp xếp lớn. Cụ thể là ta sẽ sắp xếp dữ liệu được lưu trữ trong các tập tin",
+        "C": "C. Sắp xếp trong là sắp xếp không phụ thuộc vào độ dài tập tin. Mà chỉ phụ thuộc vào bộ nhớ trong của máy tính",
+        "D": "D. Sắp xếp trong là sự sắp xếp dữ liệu được tổ chức trong bộ nhớ trong cuả máy tính, ở đó ta có thể sử dụng khả năng truy nhập ngẫu nhiên của bộ nhớ"
+    },
+    {
+        "quest": "Thế nào là sắp xếp ngoài?\n",
+        "correct": "D",
+        "A": "A. Sắp xếp ngoài là sự sắp xếp được sử dụng khi số lượng đối tượng được sắp xếp lớn. Cụ thể là ta sẽ sắp xếp dữ liệu được lưu trữ trong các tập tin",
+        "B": "B. Sắp xếp ngoài là sắp xếp không phụ thuộc vào độ dài tập tin. Mà chỉ phụ thuộc vào bộ nhớ trong của máy tính",
+        "C": "C. Sắp xếp ngoài là sự sắp xếp dữ liệu được tổ chức trong bộ nhớ trong cuả máy tính, ở đó ta có thể sử dụng khả năng truy nhập ngẫu nhiên của bộ nhớ",
+        "D": "D. Sắp xếp ngoài là sắp xếp dữ liệu không cần đến bộ nhớ trong máy tính ,mà chỉ cần các đối tượng được lưu trữ bằng bộ nhớ ngoài"
+    },
+    {
+        "quest": "Đâu là phương pháp sắp xếp trong, trong các phương pháp sau:\n",
+        "correct": "A",
+        "A": "A. Phương pháp nổi bọt(Bubble sort)",
+        "B": "B. Phương pháp sắp xếp chèn (selection sort)",
+        "C": "C. Phương pháp sắp xếp chọn (insertion sort)",
+        "D": "D. Tất cả đều sai"
+    },
+    {
+        "quest": "Đâu là phương pháp sắp xếp ngoài, trong các phương pháp sau:\n",
+        "correct": "D",
+        "A": "A. Phương pháp sắp xếp chèn (insertion sort)",
+        "B": "B. Phương pháp sắp xếp chọn (selection sort)",
+        "C": "C. Phương pháp nổi bọt(Bubble sort)",
+        "D": "D. Cả 3 phương pháp đều đúng"
+    },
+    {
+        "quest": "Bước tổng quát của Phương pháp sắp xếp kiểu lựa chọn (selection sort):\n",
+        "correct": "",
+        "A": "A. Xen phần tử a[i+1] vào danh sách đã có thứ tự a[1],a[2],..a[i] sao cho a[1], a[2],.. a[i+1] là một danh sách có thứ tự",
+        "B": "B. Xét các phần tử từ a[n] đến a[i+1].với mỗi phần tử a[j], so sánh khoá của nó với khoá của phần tử a[j-1] đứng ngay trước nó. Nếu khoá của a[j] nhỏ hơn khoá của a[j-1] thì hoán đổi a[j] và a[j-1] cho nhau",
+        "C": "C. Chọn phần tử có khoá nhỏ nhất trong n-i+1 phần tử từ a[i] đến a[n] và hoán vị nó với a[i]"
+    },
+    {
+        "quest": "Bước tổng quát của Phương pháp sắp xếp kiểu chèn (insertion sort):\n",
+        "correct": "B",
+        "A": "A. Chọn phần tử có khoá nhỏ nhất trong n-i+1 phần tử từ a[i] đến a[n] và hoán vị nó với a[i]",
+        "B": "B. Xen phần tử a[i+1] vào danh sách đã có thứ tự a[1],a[2],..a[i] sao cho a[1], a[2],.. a[i+1] là một danh sách có thứ tự",
+        "C": "C. Xét các phần tử từ a[n] đến a[i+1].với mỗi phần tử a[j], so sánh khoá của nó với khoá của phần tử a[j-1] đứng ngay trước nó. Nếu khoá của a[j] nhỏ hơn khoá của a[j-1] thì hoán đổi a[j] và a[j-1] cho nhau"
+    },
+    {
+        "quest": "Bước tổng quát của Phương pháp sắp xếp kiểu nổi bọt (bubble sort)?\n",
+        "correct": "",
+        "A": "A. Chọn phần tử có khoá nhỏ nhất trong n-i+1 phần tử từ a[i] đến a[n] và hoán vị nó với a[i]",
+        "B": "B. Xen phần tử a[i+1] vào danh sách đã có thứ tự a[1],a[2],..a[i] sao cho a[1], a[2],.. a[i+1] là một danh sách có thứ tự",
+        "C": "C. Xét các phần tử từ a[n] đến a[i+1].với mỗi phần tử a[j], so sánh khoá của nó với khoá của phần tử a[j-1] đứng ngay trước nó. Nếu khoá của a[j] nhỏ hơn khoá của a[j-1] thì hoán đổi a[j] và a[j-1] cho nhau"
+    },
+    {
+        "quest": "Thế nào là ngôn ngữ giả?\n",
+        "correct": "C",
+        "A": "A. Ngôn ngữ giả là cấu trúc của môt chuương trình chỉ viết bằng ngôn ngữ Pascal mà tuỳ thuộc vào nguười lập trình",
+        "B": "B. Ngôn ngữ giả là ngôn ngữ do ngưuoi lập trình định nghĩa",
+        "C": "C. Ngôn ngữ giả là sự kết hợp của ngôn ngữ tự nhiên và các cấu trúc của một ngôn ngữ lập trình nào đó",
+        "D": "D. Ngôn ngữ giả là ngôn ngữ lập trình pascal, C, hay một ngôn ngữ bậc cao khác"
+    },
+    {
+        "quest": "Thế nào là ngôn ngữ giả?\n",
+        "correct": "C",
+        "A": "A. Ngôn ngữ giả là cấu trúc của môt chuương trình chỉ viết bằng ngôn ngữ Pascal mà tuỳ thuộc vào nguười lập trình",
+        "B": "B. Ngôn ngữ giả là ngôn ngữ do ngưuoi lập trình định nghĩa",
+        "C": "C. Ngôn ngữ giả là sự kết hợp của ngôn ngữ tự nhiên và các cấu trúc của một ngôn ngữ lập trình nào đó",
+        "D": "D. Ngôn ngữ giả là ngôn ngữ lập trình pascal, C, hay một ngôn ngữ bậc cao khác"
+    },
+    {
+        "quest": "Thời gian chạy chương trình phụ thuộc vào các yếu tố nào?\n",
+        "correct": "D",
+        "A": "A. Dữ liệu đầu vào",
+        "B": "B. Tôc độ của máy được dùng",
+        "C": "C. Tính chất của trình biên dich được dùng",
+        "D": "D. Tất cả các yếu tố nêu ra"
+    },
+    {
+        "quest": "Nếu T1(n) và T2(n) là thời gian chạy của 2 đoạn chương trình P1 ,P2. Thời gian chạy của hai chuơng trình P1, P2 nối nhau là:\n",
+        "correct": "D",
+        "A": "A. T=T1-T2",
+        "B": "B. T = T1 T2",
+        "C": "C. T=T1/T2",
+        "D": "D. T=T1+T2"
+    },
+    {
+        "quest": "Nếu T1(n) và T2(n) là thời gian chạy của 2 đoạn chương trình P1 ,P2. Thời gian chạy của hai chuơng trình P1, P2 lồng nhau là:\n",
+        "correct": "A",
+        "A": "A. T=T1*T2",
+        "B": "B. T=T1/T2",
+        "C": "C. T=T1+T2",
+        "D": "D. T=T1-T2"
+    },
+    {
+        "quest": "Thời gian chạy của các lệnh gán, Read, Write là:\n",
+        "correct": "B",
+        "A": "A. O(2)",
+        "B": "B. O(1)",
+        "C": "C. O(n)",
+        "D": "D. O(3)"
+    },
+    {
+        "quest": "Thời gian chạy của một chuỗi tuần tự áp dụng quy tắc:\n",
+        "correct": "B",
+        "A": "A. Quy tắc Trừ",
+        "B": "B. Quy tắc Cộng",
+        "C": "C. Quy tắc Nhân",
+        "D": "D. Quy tắc Nhân đôi"
+    },
+    {
+        "quest": "Cho lệnh gán X := F với F = 5X + 7Y , X=6, Y =X + 2. Sau lệnh này X có giá trị:\n",
+        "correct": "D",
+        "A": "A. 53",
+        "B": "B. 71",
+        "C": "C. 72",
+        "D": "D. 86"
+    },
+    {
+        "quest": "Cho lệnh gán X := F với F = arctg(x) , x = Pi / 4 . Sau lệnh gán này X có giá trị:\n",
+        "correct": "B",
+        "A": "A. 1",
+        "B": "B. 2",
+        "C": "C. 3",
+        "D": "D. Pi"
+    },
+    {
+        "quest": "Cho điều kiện if B then ( y = 7x + 3 ) else ( y = x^2 + 1 ), B là điều kiện x> 7. Khi x=7 thì y có giá trị là:\n",
+        "correct": "B",
+        "A": "A. 47",
+        "B": "B. 50",
+        "C": "C. 51",
+        "D": "D. 52"
+    },
+    {
+        "quest": "Cho lệnh lặp: for i:=1 to 4 do y=3i + 6 . Hãy xác định các kết quả thu được:\n",
+        "correct": "A",
+        "A": "A. 9,12,15,18",
+        "B": "B. 3,6,9,12",
+        "C": "C. 7,10,13,16",
+        "D": "D. 5,8,11,14"
+    },
+    {
+        "quest": "Cho lệnh While B do x^2 + 7, trong đó B là x>3. Khi kiểm tra điều kiện B thì thấy x=3. Kết quả của lệnh này là:\n",
+        "correct": "D",
+        "A": "A. =7",
+        "B": "B. =15  ",
+        "C": "C. =16",
+        "D": "D. Không thực hiện được phép tính nào cả"
+    },
+    {
+        "quest": "Trong giải thuật xếp 8 con hậu, nếu đã có con hậu ở ô (5,3) thì không con hậu nào được nằm ở ô:\n",
+        "correct": "C",
+        "A": "A. (2,4)",
+        "B": "B. (4,5)",
+        "C": "C. (7,5)",
+        "D": "D. (8,1)"
+    },
+    {
+        "quest": "Trong giải thuật xếp 8 con hậu, nếu có con hậu ở ô (4,5) thì không con hậu nào được ở ô:\n",
+        "correct": "A",
+        "A": "A. (1,8)",
+        "B": "B. (2,3)",
+        "C": "C. (3,7)",
+        "D": "D. (6,4)"
+    },
+    {
+        "quest": "Trên 1 bàn cờ, những ô nằm trên cùng một đường chéo từ dưói lên với ô (i,j) có hệ thức:\n",
+        "correct": "D",
+        "A": "A. (hàng - cột)=i+j",
+        "B": "B. (hàng - côt)=i-j",
+        "C": "C. (hàng + cột)=i-j",
+        "D": "D. (hàng + cột)=i+j"
+    },
+    {
+        "quest": "Trong số các phép toán sau đây, phép toán nào không được dùng đối với mảng:\n",
+        "correct": "D",
+        "A": "A. Lưu trữ mảng",
+        "B": "B. Tạo mảng",
+        "C": "C. Tìm kiếm trên mảng",
+        "D": "D. Bổ xung một phần tử vào mảng"
+    },
+    {
+        "quest": "Cho mảng một chiều A=(a1,a2,…,ax,…,an) và được lưu trữ liên tiếp. Giả thử mỗi phần tử của mảng chiếm 3 ô và phần tử đầu tiên F(1) có địa chỉ 23 thì phần tử F(4) có địa chỉ:\n",
+        "correct": "B",
+        "A": "A. 15",
+        "B": "B. 41",
+        "C": "C. 52",
+        "D": "D. 70"
+    },
+    {
+        "quest": "Cho mảng 2 chiều : A={F( i j)} i là chỉ số hàng, j là chỉ số cột. Mảng A có 8 hàng, 9 cột. Lưu trữ liên tiếp mảng A ưu tiên hàng. Nếu phần tử F(11) có địa chỉ 50, mỗi phần tử chiếm 3 ô thì phần tử F(57) có địa chỉ:\n",
+        "correct": "D",
+        "A": "A. 148",
+        "B": "B. 152",
+        "C": "C. 162",
+        "D": "D. 176"
+    },
+    {
+        "quest": "Cho mảng 2 chiều A={F( i j)}: i là chỉ số hàng, j là chỉ số cột. Mảng A có 8 hàng, 9 cột. Lưu trữ liên tiếp mảng A ưu tiên cột nếu phần tử F(11) có địa chỉ 230 , mỗi phần tử chiếm 3 ô thì phần tử F(37) có địa chỉ:\n",
+        "correct": "C",
+        "A": "A. 378",
+        "B": "B. 382",
+        "C": "C. 380",
+        "D": "D. 420"
+    },
+    {
+        "quest": "Dùng phương pháp lưu trữ liên tiếp để lưu trữ một ma trận ( mảng hai chiều) có nhược điểm lớn nhất là:\n",
+        "correct": "B",
+        "A": "A. Cần một lượng ô nhớ lớn",
+        "B": "B. Lãng phí ô nhớ khi ma trận thưa",
+        "C": "C. Khó tìm kiếm"
+    },
+    {
+        "quest": "Dùng STACK để lưu trữ số nhị phân có giá trị bằng số thập phân 215 ta có kết quả: (số bên trái vào trước số bên phải)\n",
+        "correct": "B",
+        "A": "A. 11001110",
+        "B": "B. 11101011",
+        "C": "C. 10111101",
+        "D": "D. 11110011"
+    },
+    {
+        "quest": "Cho cây nhị phân T. Phép duyệt thứ tự trước cho kết quả là:\n",
+        "correct": "D",
+        "A": "A. ADBCEFG",
+        "B": "B. AEBDCGF",
+        "C": "C. AEDBCFG",
+        "D": "D. ABDECFG"
+    },
+    {
+        "quest": "Độ cao của cây là gì?\n",
+        "correct": "D",
+        "A": "A. Cấp lớn nhất của nút",
+        "B": "B. Số cây con của cây",
+        "C": "C. Số lượng nút của cây",
+        "D": "D. Mức lớn nhất của cây"
+    },
+    {
+        "quest": "Cho cây nhị phân T, nút có địa chỉ 7 có 2 con ở địa chỉ nào:\n",
+        "correct": "C",
+        "A": "A. 8 và 9",
+        "B": "B. 13 và 14",
+        "C": "C. 14 và 15",
+        "D": "D. 30 và 31"
+    },
+    {
+        "quest": "Cho cây nhị phân T, nút có địa chỉ 7 có 2 con ở địa chỉ nào:\n",
+        "correct": "C",
+        "A": "A. 8 và 9",
+        "B": "B. 13 và 14",
+        "C": "C. 14 và 15",
+        "D": "D. 30 và 31"
+    },
+    {
+        "quest": "Cây 5 phân có nghĩa là gì?\n",
+        "correct": "C",
+        "A": "A. Mức có nhiều nút nhất là 5",
+        "B": "B. Cây có chiều cao là 5",
+        "C": "C. Nút có cấp lớn nhất là 5",
+        "D": "D. Cây đó có 5 nút"
+    },
+    {
+        "quest": "Có 6 tầu x1,x2,x3,x4,x5,x6. Gọi V là lệnh đưa 1 đầu tầu vào kho ( kho là 1 STACK), R là lệnh đưa 1 đầu tầu từ kho ra để sửa: Vởy ta phải thực hiện các lệnh V, R theo thứ tự nào để ta sẽ sửa chữa lần lượt 3 đầu tầu: x3, x2, x4:\n",
+        "correct": "D",
+        "A": "A. V(1) V(2) R(2) R(1) V(3) V(4) R(4)",
+        "B": "B. V(1) R(1) V(2) R(2) V(3) V(4) R(4)",
+        "C": "C. V(1) V(2) V(3) V(4) R(4) R(3) R(2)",
+        "D": "D. V(1) V(2) V(3) R(3) R(2) V(4) R(4)"
+    },
+    {
+        "quest": "Cho dãy khoá 42,23,74,11,65,58 . Dùng phương pháp sắp xếp kiểu chọn (selection sort), sau 3 bước dãy có dạng nào?\n",
+        "correct": "D",
+        "A": "A. 11,23,74,58,65,42",
+        "B": "B. 42,11,74,23,58,65",
+        "C": "C. 11,23,42,74,58,65",
+        "D": "D. 11,23,42,74,65,58"
+    },
+    {
+        "quest": "Ý tưởng phương pháp sắp xếp nổi bọt (bubble sort) là:\n",
+        "correct": "C",
+        "A": "A. Phân đoạn dãy thành nhiều dãy con và lần lượt trộn hai dãy con thành dãy lớn hơn, cho đến khi thu được dãy ban đầu đã được sắp xếp",
+        "B": "B. Chọn phần tử bé nhất xếp vào vị trí thứ nhất bằng cách đổi chổ phần tử bé nhất với phần tử thứ nhấ; Tương tự đối với phần tử nhỏ thứ hai,ba...",
+        "C": "C. Bắt đầu từ cuối dãy đến đầu dãy, ta lần lượt so sánh hai phần tử kế tiếp nhau, nếu phần tử nào nhỏ hơn được đứng vị trí trên",
+        "D": "D. Lần lượt lấy phần tử của danh sách chèn vị trí thích hợp của nó trong dãy bằng cách đẩy các phần tử lớn hơn xuống"
+    },
+    {
+        "quest": "Phương pháp sắp xếp nhanh (Quick sort) chính là phương pháp:\n",
+        "correct": "B",
+        "A": "A. Trộn",
+        "B": "B. Phân đoạn",
+        "C": "C. Vun đống",
+        "D": "D. Chèn"
+    },
+    {
+        "quest": "Cơ chế heap trong sắp xếp vun đống là:\n",
+        "correct": "A",
+        "A": "A. Cây nhị phân đầy đủ với tính chất giá trị của nút cha luôn lớn hơn giá trị hai nút con",
+        "B": "B. Cây nhị phân hoàn chỉnh với tính chất giá trị của nút cha lớn luôn lớn hơn giá trị các nút trong cây con trái và nhỏ hơn giá trị các nút trong cây con phải",
+        "C": "C. Cây nhị phân hoàn chỉnh với tính chất giá trị của nút cha luôn lớn hơn giá trị hai nút con",
+        "D": "D. Cây nhị phân đầy đủ với tính chất giá trị của nút cha lớn luôn lớn hơn giá trị các nút trong cây con trái và nhỏ hơn giá trị các nút trong cây con phải"
+    },
+    {
+        "quest": "Trong giải thuật sắp xếp vun đống, ta có 4 thủ tục con (Insert - thêm 1 phần tử vào cây; Downheap - vun đống lại sau khi loại một phần tử khỏi Heap, Upheap- vun đống sau khi thêm một phần tử vào cây; Remove - loại 1 phần tử khỏi cây nhị phân). Để sắp xếp các phần tử trong dãy theo phương pháp vun đống, ta thực hiện 4 thủ tục trên theo thứ tự như thế nào?\n",
+        "correct": "D",
+        "A": "A. Remove – Downheap – Insert – Upheap",
+        "B": "B. Insert – Upheap – Downheap – Remove",
+        "C": "C. Upheap – Downheap – Remove – Insert",
+        "D": "D. Insert – Upheap – Remove – Downheap"
+    },
+    {
+        "quest": "Tư tưởng của giải thuật tìm kiếm nhị phân:\n",
+        "correct": "C",
+        "A": "A. Tìm kiếm dựa vào cây nhị tìm kiếm",
+        "B": "B. Lần lượt chia dãy thành hai dãy con dựa vào phần tử khoá, sau đó thực hiện việc tìm kiếm trên hai đoạn đã chia",
+        "C": "C. Tại mỗi bước tiến hành so sánh X với phần tử ở giữa của dãy,Dựa vào bước so sánh này quyết định giới hạn dãy tìm kiếm nằm ở nửa trên, hay nửa dưới của dãy hiện hành",
+        "D": "D. So sánh X lần lượt với các phần tử thứ nhất, thứ hai,... của dãy cho đến khi gặp phần tử có khoá cần tìm"
+    },
+    {
+        "quest": "Tư tưởng của giải thuật tìm kiếm tuần tự\n",
+        "correct": "A",
+        "A": "A. So sánh X lần lượt với các phần tử thứ nhất, thứ hai,... của dãy cho đến khi gặp phần tử có khoá cần tìm",
+        "B": "B. Tại mỗi bước tiến hành so sánh X với phần tử ở giữa của dãy,Dựa vào bước so sánh này quyết định giới hạn dãy tìm kiếm nằm ở nửa trên, hay nửa dưới của dãy hiện hành",
+        "C": "C. Lần lượt chia dãy thành hai dãy con dựa vào phần tử khoá, sau đó thực hiện việc tìm kiếm trên hai đoạn đã chia",
+        "D": "D. Tìm kiếm dựa vào cây nhị tìm kiếm: Nừu giá trị cần tìm nhỏ hơn gốc thì thực hiện tìm kiếm trên cây con trái, ngược lại ta việc tìm kiếm được thực hiện trên cây con phải"
+    },
+    {
+        "quest": "Giả sử có hàm tính số Fibonaci là fibo(int n), cho biết lệnh nào đúng khi tính giá trị Fibonaci của n và gán cho biến kết quả?\n \n",
+        "correct": "D",
+        "A": "A. kq==fibo(n);",
+        "B": "B. kq!=fibo(n);",
+        "C": "C. kq=fibo(n)",
+        "D": "D. kq=fibo(n)"
+    },
+    {
+        "quest": "Bài toán tháp Hà Nội được phát biểu như sau:\nInput: có 3 cái cọc và n cái đĩa xếp tại cọc 1\nOutput: Chỉ ra các bước thực hiện di chuyển n cái đĩa từ cọc 1 sang cọc\nNếu sử dụng giải thuật đệ quy, chỉ ra trường hợp gọi đệ quy:\n",
+        "correct": "B",
+        "A": "A. n > 0",
+        "B": "B. n > 1",
+        "C": "C. n > 2",
+        "D": "D. n > 3"
+    },
+    {
+        "quest": "Để dịch chuyển các đĩa từ cọc B sang cọc C với cọc A là trung gian, lệnh gọi hàm nào là đúng?\n",
+        "correct": "D",
+        "A": "A. dichuyen(n,\"A\",\"C\",\"B\");",
+        "B": "B. dichuyen(n,\"A\",\"B\",\"C\");",
+        "C": "C. dichuyen(n,\"A\",\"B\",\"C\")",
+        "D": "D. dichuyen(n,\"B\",\"A\",\"C\");"
+    }
+]
