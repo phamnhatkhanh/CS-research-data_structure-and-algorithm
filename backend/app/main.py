@@ -1,3 +1,7 @@
+if __name__ == '__main__' and __package__ is None:
+    from os import sys, path
+    sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+    
 import time
 from urllib.request import Request
 from fastapi import FastAPI
@@ -14,8 +18,6 @@ from manager import managerrouter
 from keyphrasenoidung import keyphrasenoidungrouter
 from question import questionrouter
 from models import initialize_sql
-
-
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -37,7 +39,6 @@ initialize_sql(engine)
 async def hello():
     return "Hello"
 
-
 app.include_router(authrouter.router)
 app.include_router(usersrouter.router)
 app.include_router(testrouter.router)
@@ -49,3 +50,4 @@ app.include_router(sectionrouter.router)
 app.include_router(keyphraserouter.router)
 app.include_router(keyphrasenoidungrouter.router)
 app.include_router(managerrouter.router)
+

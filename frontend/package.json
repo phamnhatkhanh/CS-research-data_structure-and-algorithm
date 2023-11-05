@@ -25,7 +25,7 @@
     "url": "https://github.com/creativetimofficial/argon-dashboard-react/issues"
   },
   "homepage": "https://demos.creative-tim.com/argon-dashboard-react/",
-  "scripts": {
+  "scripts": { 
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -60,13 +60,14 @@
     "react-dom": "17.0.2",
     "react-redux": "^8.0.0",
     "react-router-dom": "5.2.0",
-    "react-scripts": "4.0.3",
+    
     "reactstrap": "8.9.0",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
     "eslint-plugin-react": "^7.29.4",
+    "react-scripts": "4.0.3",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.9"
   },
